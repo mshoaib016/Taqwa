@@ -1,65 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taqwa</title>
+<html lang="en" id="html">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AL Taqwa Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="assets/photo-1512453979798-5ea266f8880c.jpg" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <a href="tel:+971555443007" class="top-item">
+        <i class="fa-solid fa-phone"></i>
+        <span id="phone-text">+971 555 443 007</span>
+      </a>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- CSS File -->
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header class="header">
-    <div class="logo">
-        <span class="logo-icon">AT</span>
-        <div>
-            <h3>AL Taqwa Group</h3>
-            <small>PRO Services & Business Solutions</small>
-        </div>
+      <button class="top-item lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe"></i>
+        <span id="lang-text">العربية</span>
+      </button>
     </div>
 
-    <nav class="nav">
-        <a href="#">Home</a>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <div class="logo-icon">AT</div>
+        <div>
+          <h2 id="logo-title">Taqwa Group</h2>
+          <p id="logo-sub">Management Service Co.</p>
+        </div>
+      </div>
+
+      <nav>
+        <a class="active" href="#">Home</a>
         <a href="#">Services</a>
         <a href="#">About Us</a>
         <a href="#">Contact</a>
-    </nav>
 
-    <a class="call-btn" href="tel:+971555443007">Call Us</a>
-</header>
+        <a href="tel:+971555443007" class="call-link">
+          <button class="call-btn" id="call-btn">Call Us</button>
+        </a>
+      </nav>
+    </header>
 
-<div class="top-bar">
-    <a href="tel:+971555443007">📞 +971 555 443 007</a>
-    <a href="#">🌐 العربية</a>
-</div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="badge" id="badge-text"
+        ><span class="ae-small">AE</span> Trusted in UAE</span
+      >
 
-<section class="hero">
-    <div class="hero-content">
-        <span class="badge">UAE Trusted PRO Services</span>
+      <h1 id="hero-title">
+        Your Trusted Partner for <br />
+        <span>PRO Services in UAE</span>
+      </h1>
 
-        <h1>
-            Your Trusted Partner for<br>
-            <span>PRO Services in UAE</span>
-        </h1>
+      <p id="hero-desc">
+        Complete business solutions from setup to operations. We handle all
+        <br />
+        your government-related services with expertise and efficiency.
+      </p>
 
-        <p>
-            Complete business solutions from setup to operations.
-            We handle all government-related services with expertise and efficiency.
-        </p>
+      <div class="hero-buttons">
+        <a href="tel:+971555443007" class="btn primary" id="call-now">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+        <a href="#" class="btn secondary" id="our-services">
+          Our Services <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
 
-        <div class="hero-buttons">
-            <a href="#" class="btn-primary">Call Now</a>
-            <a href="#" class="btn-outline">Our Services</a>
-        </div>
-    </div>
-</section>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/971555443007" class="whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-<a href="https://wa.me/971555443007" class="whatsapp">💬</a>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
