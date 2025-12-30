@@ -297,9 +297,9 @@
 .trusted-label {
   background: rgba(245, 166, 35, 0.9);
   color: #fff;
-  padding: 4px 12px;
+  padding: 8px 10px;
   border-radius: 20px;
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.5px;
   display: inline-block;
   margin-bottom: 20px;
@@ -370,18 +370,19 @@
 }
 
 .stat p {
-  font-size: 14px;
+  font-size: 10px;
   color: #fff;
 }
 
 .visitor-card {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   background: #fff;
-  border-radius: 12px;
-  padding: 12px 24px;
-  color: #333;
+  border-radius: 14px;
+  padding: 10px 18px; /* ⬅ left/right + bottom space kam */
+  color: rgb(30 58 138 / var(--tw-text-opacity, 1));
   font-weight: 500;
 }
 
@@ -390,8 +391,19 @@
 }
 
 .visitor-card h3 {
-  font-size: 18px;
+  font-size: 24px;
   margin-top: 4px;
+}
+
+.visitor-card .online h3 {
+  color: #22c55e; /* green */
+  font-weight: 700; /* optional bold */
+}
+
+.divider {
+  width: 1px;
+  height: 40px;
+  background: rgb(203 213 225 / var(--tw-bg-opacity, 1));
 }
 
 /* WhatsApp Icon */
@@ -489,4 +501,47 @@
 }
 .top-bar.hide {
   display: none;
+}
+.visitors .label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666;
+}
+.online-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #666;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+  position: relative;
+}
+
+/* wave animation */
+.dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(34, 197, 94, 0.6);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
 }

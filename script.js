@@ -1,5 +1,6 @@
-const topBar = document.querySelector(".top-bar");
 document.addEventListener("DOMContentLoaded", () => {
+  const topBar = document.querySelector(".top-bar");
+
   // ===== Language Switcher =====
   const languageSwitcher = document.getElementById("languageSwitcher");
   if (languageSwitcher) {
@@ -15,13 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== Visitors Counter =====
-  let totalVisitors = 15451;
-  let onlineNow = 23;
+  const totalVisitors = 15451; // FIXED
+  const totalObj = document.getElementById("totalVisitors");
+  if (totalObj) totalObj.innerText = totalVisitors.toLocaleString();
 
-  function animateValue(id, start, end, duration) {
-    const obj = document.getElementById(id);
+  const onlineObj = document.getElementById("onlineNow");
+  const dot = document.querySelector(".online .dot");
+
+  function animateValue(obj, start, end, duration) {
     if (!obj) return;
-
     let range = end - start;
     let current = start;
     let increment = range > 0 ? 1 : -1;
@@ -40,16 +43,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }, stepTime);
   }
 
-  animateValue("totalVisitors", 0, totalVisitors, 2000);
-  animateValue("onlineNow", 0, onlineNow, 2000);
+  // Animate initial online value
+  animateValue(
+    onlineObj,
+    0,
+    parseInt(onlineObj.innerText.replace(/,/g, "")) || 23,
+    2000
+  );
 
+  // Update Online Now every 3 sec
   setInterval(() => {
-    const obj = document.getElementById("onlineNow");
-    if (!obj) return;
-
-    let current = parseInt(obj.innerText.replace(/,/g, "")) || 0;
+    if (!onlineObj) return;
+    let current = parseInt(onlineObj.innerText.replace(/,/g, "")) || 0;
     let randomOnline = Math.floor(Math.random() * 50) + 1;
-    animateValue("onlineNow", current, randomOnline, 1000);
+
+    animateValue(onlineObj, current, randomOnline, 1000);
+
+    // restart green dot animation
+    if (dot) {
+      dot.style.animation = "none";
+      dot.offsetHeight; // trigger reflow
+      dot.style.animation = "pulse 1.5s infinite";
+    }
   }, 3000);
 
   // ===== Header Scroll Effect =====
@@ -64,26 +79,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("menuOverlay");
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.add("show");
-    overlay.classList.add("show");
-    topBar.classList.add("hide"); // ✅ YELLOW BAR HIDE
-  });
 
   if (hamburger && mobileMenu && overlay) {
     hamburger.addEventListener("click", () => {
       mobileMenu.classList.add("show");
       overlay.classList.add("show");
-      overlay.addEventListener("click", () => {
-        mobileMenu.classList.remove("show");
-        overlay.classList.remove("show");
-        topBar.classList.remove("hide"); // ✅ YELLOW BAR SHOW BACK
-      });
+      topBar.classList.add("hide"); // hide yellow bar
     });
 
     overlay.addEventListener("click", () => {
       mobileMenu.classList.remove("show");
       overlay.classList.remove("show");
+      topBar.classList.remove("hide"); // show yellow bar
     });
   }
 });
