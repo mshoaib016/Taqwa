@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Header</title>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- ===== Top Header ===== -->
+    <!-- ===== HEADER ===== -->
     <header class="main-header">
       <!-- Logo -->
       <div class="logo-area">
@@ -29,7 +31,7 @@
         </div>
       </div>
 
-      <!-- Navigation -->
+      <!-- Navigation (Desktop) -->
       <nav class="nav-menu">
         <a href="#" class="active" data-en="Home" data-ar="الرئيسية">Home</a>
         <a href="#" data-en="Services" data-ar="الخدمات">Services</a>
@@ -37,16 +39,36 @@
         <a href="#" data-en="Contact" data-ar="اتصل بنا">Contact</a>
       </nav>
 
-      <!-- Call Button -->
-      <div class="header-btn">
-        <a href="#" data-en="Call Us" data-ar="اتصل بنا">Call Us</a>
+      <!-- Right Side -->
+      <div class="header-right">
+        <div class="header-btn">
+          <a href="#" data-en="Call Us" data-ar="اتصل بنا">Call Us</a>
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
 
-    <!-- ===== Orange Bar ===== -->
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="#" data-en="Services" data-ar="الخدمات">Services</a>
+      <a href="#" data-en="About Us" data-ar="من نحن">About Us</a>
+      <a href="#" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
       <div class="top-bar-content">
         <div class="phone">📞 +971 555 443 007</div>
+
         <div class="lang">
           <select id="languageSwitcher">
             <option value="en">English</option>
@@ -55,19 +77,28 @@
         </div>
       </div>
     </div>
+
+    <!-- ===== HERO ===== -->
     <section class="hero-section">
       <div class="hero-overlay">
         <div class="hero-content">
           <span class="trusted-label">AE Trusted in UAE</span>
-          <h1>Your Trusted Partner for <br> <span>PRO Services in UAE</span></h1>
+
+          <h1>
+            Your Trusted Partner for <br />
+            <span>PRO Services in UAE</span>
+          </h1>
+
           <p>
-            Complete business solutions from setup to operations. We handle all <br>
-            your government-related services with expertise and efficiency.
+            Complete business solutions from setup to operations.<br />
+            We handle all your government-related services.
           </p>
+
           <div class="hero-buttons">
             <a href="tel:+971555443007" class="btn call-btn">📞 Call Now</a>
             <a href="#services" class="btn service-btn">Our Services →</a>
           </div>
+
           <div class="hero-stats">
             <div class="stat">
               <h2>500+</h2>
@@ -82,21 +113,23 @@
               <p>Support</p>
             </div>
           </div>
+
           <div class="visitor-card">
             <div class="visitors">
               <span>Total Visitors</span>
-              <h3>15,451</h3>
+              <h3 id="totalVisitors">15,451</h3>
             </div>
+
             <div class="online">
               <span>Online Now</span>
-              <h3>23</h3>
+              <h3 id="onlineNow">23</h3>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WhatsApp Icon -->
+    <!-- WhatsApp -->
     <a href="https://wa.me/971555443007" target="_blank" class="whatsapp-icon">
       <img
         src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
