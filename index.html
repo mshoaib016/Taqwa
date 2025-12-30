@@ -1,80 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" id="html">
-  <head>
-    <meta charset="UTF-8" />
-    <title>AL Taqwa Group</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="assets/photo-1512453979798-5ea266f8880c.jpg" rel="stylesheet" />
-  </head>
-  <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-      <a href="tel:+971555443007" class="top-item">
-        <i class="fa-solid fa-phone"></i>
-        <span id="phone-text">+971 555 443 007</span>
-      </a>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Header</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      <button class="top-item lang-btn" onclick="toggleLanguage()">
-        <i class="fa-solid fa-globe"></i>
-        <span id="lang-text">العربية</span>
-      </button>
+<!-- ===== Top Header ===== -->
+<header class="main-header">
+
+  <!-- Logo -->
+  <div class="logo-area">
+    <div class="logo-circle">AT</div>
+    <div class="logo-text">
+      <h3 data-en="AL Taqwa Group" data-ar="مجموعة التقوى">AL Taqwa Group</h3>
+      <p data-en="PRO Services & Business Solutions" data-ar="الخدمات والحلول التجارية">PRO Services & Business Solutions</p>
     </div>
+  </div>
 
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">
-        <div class="logo-icon">AT</div>
-        <div>
-          <h2 id="logo-title">Taqwa Group</h2>
-          <p id="logo-sub">Management Service Co.</p>
-        </div>
-      </div>
+  <!-- Navigation -->
+  <nav class="nav-menu">
+    <a href="#" class="active" data-en="Home" data-ar="الرئيسية">Home</a>
+    <a href="#" data-en="Services" data-ar="الخدمات">Services</a>
+    <a href="#" data-en="About Us" data-ar="من نحن">About Us</a>
+    <a href="#" data-en="Contact" data-ar="اتصل بنا">Contact</a>
+  </nav>
 
-      <nav>
-        <a class="active" href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
+  <!-- Call Button -->
+  <div class="header-btn">
+    <a href="#" data-en="Call Us" data-ar="اتصل بنا">Call Us</a>
+  </div>
 
-        <a href="tel:+971555443007" class="call-link">
-          <button class="call-btn" id="call-btn">Call Us</button>
-        </a>
-      </nav>
-    </header>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-      <span class="badge" id="badge-text"
-        ><span class="ae-small">AE</span> Trusted in UAE</span
-      >
+<!-- ===== Orange Bar ===== -->
+<div class="top-bar">
+  <div class="top-bar-content">
+    <div class="phone">
+      📞 +971 555 443 007
+    </div>
+    <div class="lang">
+      <select id="languageSwitcher">
+        <option value="en">English</option>
+        <option value="ar">العربية</option>
+      </select>
+    </div>
+  </div>
+</div>
 
-      <h1 id="hero-title">
-        Your Trusted Partner for <br />
-        <span>PRO Services in UAE</span>
-      </h1>
+<!-- ===== Sample Content ===== -->
+<section class="content">
+  <h1 data-en="Welcome to Our Website" data-ar="مرحبا بكم في موقعنا">Welcome to Our Website</h1>
+  <p data-en="We provide the best services." data-ar="نحن نقدم أفضل الخدمات.">
+    We provide the best services.
+  </p>
+</section>
 
-      <p id="hero-desc">
-        Complete business solutions from setup to operations. We handle all
-        <br />
-        your government-related services with expertise and efficiency.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="tel:+971555443007" class="btn primary" id="call-now">
-          <i class="fa-solid fa-phone"></i> Call Now
-        </a>
-        <a href="#" class="btn secondary" id="our-services">
-          Our Services <i class="fa-solid fa-arrow-right"></i>
-        </a>
-      </div>
-    </section>
-
-    <!-- WhatsApp -->
-    <a href="https://wa.me/971555443007" class="whatsapp" target="_blank">
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <script src="script.js"></script>
-  </body>
+<script src="script.js"></script>
+</body>
 </html>

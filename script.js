@@ -1,40 +1,17 @@
-let isArabic = false;
+const languageSwitcher = document.getElementById("languageSwitcher");
 
-function toggleLanguage() {
-    const body = document.body;
-    const html = document.getElementById("html");
+languageSwitcher.addEventListener("change", () => {
+  const lang = languageSwitcher.value; // 'en' or 'ar'
 
-    if (!isArabic) {
-        body.classList.add("rtl");
-        html.lang = "ar";
+  // Change all elements with data-en and data-ar
+  document.querySelectorAll("[data-en]").forEach((el) => {
+    el.textContent = el.getAttribute(`data-${lang}`);
+  });
 
-        document.getElementById("lang-text").innerText = "English";
-        document.getElementById("logo-title").innerText = "مجموعة التقوى";
-        document.getElementById("logo-sub").innerText = "خدمات PRO وحلول الأعمال";
-
-        document.getElementById("nav-home").innerText = "الرئيسية";
-        document.getElementById("nav-services").innerText = "الخدمات";
-        document.getElementById("nav-about").innerText = "من نحن";
-        document.getElementById("nav-contact").innerText = "اتصل بنا";
-        document.getElementById("call-btn").innerText = "اتصل بنا";
-
-        document.getElementById("badge-text").innerText = "موثوق في الإمارات";
-        document.getElementById("hero-title").innerHTML =
-            "شريكك الموثوق لـ <br><span>خدمات PRO في الإمارات</span>";
-
-        document.getElementById("hero-desc").innerText =
-            "حلول متكاملة للأعمال من التأسيس إلى التشغيل. نحن ندير جميع خدماتك الحكومية باحترافية وكفاءة.";
-
-        document.getElementById("call-now").innerHTML =
-            '<i class="fa-solid fa-phone"></i> اتصل الآن';
-
-        document.getElementById("our-services").innerText = "خدماتنا";
-
-        isArabic = true;
-    } else {
-        body.classList.remove("rtl");
-        html.lang = "en";
-
-        location.reload(); // back to English
-    }
-}
+  // Change the page direction for Arabic
+  if (lang === "ar") {
+    document.body.dir = "rtl";
+  } else {
+    document.body.dir = "ltr";
+  }
+});

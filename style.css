@@ -2,215 +2,198 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: serif;
+  font-family: "Poppins", sans-serif;
 }
 
-body {
-  padding-top: 140px;
-}
-
-/* RTL */
-body.rtl {
-  direction: rtl;
-}
-
-/* Top Bar */
-.top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: #f7931e;
-  padding: 12px 40px;
+/* ===== Main Header ===== */
+.main-header {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  z-index: 1001;
-}
-
-.top-item {
-  background: #fff;
-  padding: 8px 18px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  color: #000;
-}
-
-/* Header */
-.header {
-  position: fixed;
-  top: 52px;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  padding: 16px 40px;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  z-index: 10;
 }
 
 /* Logo */
-.logo {
+.logo-area {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.logo-icon {
+.logo-circle {
   width: 45px;
   height: 45px;
-  background: #1e3a8a;
+  background: #1f3fbf;
   color: #fff;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.logo h2 {
-  color: #1e3a8a;
-  font-size: 20px;
-}
-
-.logo p {
-  font-size: 12px;
-  color: #555;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Nav */
-nav a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 700;
-  gap: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-nav a.active {
-  color: #334155;
-  border-bottom: 2px solid #d4af37;
-}
-
-.call-btn {
-  background: #1e3a8a;
-  color: #fff;
-  border: none;
-  font: 14px;
-  padding: 8px 16px;
-  border-radius: 6px;
-}
-
-/* Hero */
-.hero {
-  height: 80vh;
-  background: linear-gradient(rgba(10, 35, 90, 0.85), rgba(10, 35, 90, 0.85)),
-    url(assets/photo-1512453979798-5ea266f8880c.jpg) center/cover;
-  text-align: center;
-  color: #fff;
-  padding: 120px 20px;
-}
-
-.badge {
-  background-color: #f59e0b33;
-  padding: 8px 18px;
-  border: 1px solid rgb(251 191 36 / var(--tw-text-opacity, 1));
-  border-radius: 20px;
-  display: inline-block;
-  margin-bottom: 25px;
-  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
-}
-
-.ae-small {
-  font-size: 70%;
-  letter-spacing: 0.5px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.hero h1 {
-  font-size: 52px;
-}
-
-.hero h1 span {
-  color: #4f9cff;
-}
-
-.hero p {
-  margin: 25px 0;
-  font-size: 18px;
-}
-
-.btn {
-  padding: 14px 28px;
-  border-radius: 8px;
-  text-decoration: none;
   font-weight: 600;
-  margin: 0 10px;
-}
-
-.btn.primary {
-  background: #f7931e;
-  color: #fff;
-}
-
-.btn.secondary {
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-/* WhatsApp */
-.whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: #25d366;
-  color: #fff;
-  width: 55px;
-  height: 55px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28px;
 }
-nav a {
-  position: relative;
-  margin: 0 12px;
+
+.logo-text h3 {
+  font-size: 16px;
+  color: #1f3fbf;
+}
+
+.logo-text p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Navigation Center */
+.nav-menu {
+  display: flex;
+  gap: 35px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Navigation Links with Hover Underline */
+.nav-menu a {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding-bottom: 4px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-nav a::after {
+/* Underline effect */
+.nav-menu a::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -6px;
   left: 0;
+  width: 0;
   height: 2px;
-  width: 0%;
-  background: #d4af37;
-  transition: 0.3s ease;
+  background: #f5a623;
+  transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+/* On hover */
+.nav-menu a:hover::after {
   width: 100%;
 }
 
-/* No underline for Home by default */
-nav a.active::after {
-  width: 0%;
+.nav-menu a:hover {
+  color: #f5a623; /* Text color changes on hover */
 }
-/* Remove underline effect from Call Us */
-nav a.call-link::after {
+
+/* Active link underline (always visible) */
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* Call Button */
+.header-btn a {
+  background: #1f3fbf;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.header-btn a:hover {
+  opacity: 0.8; /* Slight fade */
+  transform: translateY(-2px); /* Optional slight lift */
+}
+
+/* ===== Orange Bar ===== */
+/* ===== Top Bar ===== */
+.top-bar {
+  background: linear-gradient(to right, #f9a602, #f7931e);
+  padding: 10px 40px;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Phone Button */
+.phone {
+  background: #fff;
+  padding: 4px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid #1f3fbf; /* Border added */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center text */
+  transition: all 0.3s ease;
+}
+
+.phone:hover {
+  background: rgb(30 58 138 / var(--tw-text-opacity, 1));
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Language Dropdown */
+.lang {
+  background: #fff;
+  padding: 4px 16px;
+  border-radius: 8px;
+  border: 2px solid #1f3fbf; /* Border added */
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.lang select {
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  appearance: none; /* Remove default arrow */
+}
+
+/* Stylish dropdown arrow */
+.lang select::-ms-expand {
   display: none;
+}
+
+/* Dropdown hover */
+.lang select:hover {
+  background: #f5a623;
+  color: #fff;
+}
+
+/* ===== Sample Content ===== */
+.content {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.content h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #1f3fbf;
+}
+
+.content p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
 }
