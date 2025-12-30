@@ -316,7 +316,7 @@
 }
 
 .hero-content p {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 30px;
   color: #f0f0f0;
 }
@@ -442,7 +442,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 48px;
   }
   .hero-stats {
     flex-direction: column;
@@ -558,23 +558,24 @@
   }
 }
 .services-section {
-  padding: 80px 40px;
+  padding: 60px 20px;
   background: #fff;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
 .services-section h2 {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-top: -12px;
+  margin-bottom: 6px;
   color: rgb(15 23 42 / var(--tw-text-opacity, 1));
 }
 
 .subtitle {
   color: #555;
   margin-bottom: 50px;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .services-grid {
@@ -696,4 +697,88 @@
   .services-grid {
     grid-template-columns: 1fr;
   }
+}
+.manpower-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.manpower-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  /* margin-bottom: 40px; */
+}
+
+.manpower-section p {
+  max-width: 700px;
+  margin: 0 auto 20px;
+  color: #555;
+  font-size: 15px;
+}
+
+.manpower-discription {
+  line-height: 1.8;
+}
+
+.manpower-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.manpower-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 320px;
+  color: #fff;
+}
+
+.manpower-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.manpower-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 20, 60, 0.9),
+    rgba(10, 20, 60, 0.2)
+  );
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.manpower-icon {
+  width: 48px;
+  height: 48px;
+  background: #fcb900;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.manpower-icon img {
+  width: 24px;
+}
+
+.manpower-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.manpower-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #e0e0e0;
 }
