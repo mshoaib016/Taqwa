@@ -559,21 +559,22 @@
 }
 .services-section {
   padding: 80px 40px;
-  background: #f8fafc;
+  background: #fff;
   text-align: center;
   font-family: Arial, sans-serif;
 }
 
 .services-section h2 {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 800;
   margin-bottom: 10px;
+  color: rgb(15 23 42 / var(--tw-text-opacity, 1));
 }
 
 .subtitle {
   color: #555;
   margin-bottom: 50px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .services-grid {
@@ -590,10 +591,50 @@
   border-radius: 16px;
   text-align: left;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(30, 58, 138, 0.1);
+  outline-color: hsl(var(--ring) / 0.5);
   transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+/* card move up */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(30, 64, 175, 0.18);
+}
+
+/* Hover effect layer */
+.service-card::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 160px;
+  height: 160px;
+  background: rgba(30, 64, 175, 0.08);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* hover effect */
+.service-card:hover::after {
+  opacity: 1.5;
 }
 
 .service-card:hover {
+  box-shadow: 0 18px 40px rgba(30, 64, 175, 0.18);
+}
+
+/* icon smooth animation */
+.service-card .icon {
+  transition: transform 0.35s ease;
+}
+
+/* jab card hover ho */
+.service-card:hover .icon {
   transform: translateY(-6px);
 }
 
@@ -608,10 +649,11 @@
   justify-content: center;
   font-size: 26px;
   margin-bottom: 20px;
+  outline-color: hsl(var(--ring) / 0.5);
 }
 
 .service-card h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
 }
