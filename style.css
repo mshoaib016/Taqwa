@@ -786,3 +786,393 @@
   text-align: left;
   justify-content: left;
 }
+/* ===== UNIQUE MANPOWER SECTION ===== */
+.mp-box-wrapper {
+  max-width: 1150px;
+  margin: 60px auto;
+  background: linear-gradient(135deg, #1e3a8a, #1e40af);
+  border-radius: 20px;
+  padding: 35px 90px;
+  color: #fff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.mp-box-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.mp-box-features {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.mp-box-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.mp-box-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.mp-box-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgb(251 191 36 / var(--tw-text-opacity, 1));
+  color: #1e3a8a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+/* BUTTON */
+.mp-box-btn {
+  text-align: center;
+}
+
+.mp-box-btn a {
+  background: #f59e0b;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+}
+
+.mp-box-btn a:hover {
+  background: #d97706;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .mp-box-features {
+    flex-direction: column;
+  }
+  .mp-box-wrapper {
+    padding: 40px 25px;
+  }
+}
+.atg-why-section {
+  color: var(--atg-text-dark);
+}
+
+.atg-card p {
+  font-size: 14px;
+  color: var(--atg-text-light);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .atg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .atg-header h2 {
+    font-size: 28px;
+  }
+
+  .atg-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===============================
+   Al Taqwa Group - Scoped CSS
+   No Conflict Guaranteed
+================================ */
+
+:root {
+  --atg-primary: #0b2c5d;
+  --atg-text-dark: #1f2937;
+  --atg-text-light: #6b7280;
+  --atg-card-bg: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.atg-why-section {
+  padding: 30px;
+  background: #ffffff;
+}
+
+.atg-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.atg-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.atg-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.atg-header p {
+  color: #475569;
+  font-size: 15.5px;
+}
+
+.atg-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.atg-card {
+  background: var(--atg-card-bg);
+  padding: 40px 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.atg-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(11, 44, 93, 0.25);
+}
+
+.atg-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #eaf0fa, #fff7cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.atg-icon i {
+  font-size: 30px;
+  color: var(--atg-primary);
+}
+
+.atg-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--atg-text-dark);
+}
+
+.atg-card p {
+  font-size: 14px;
+  color: var(--atg-text-light);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .atg-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .atg-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atg-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* ===============================
+Al Taqwa Group – Trusted Partners
+Scoped & Responsive CSS
+================================ */
+
+.atg-partners-section {
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.atg-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.atg-partners-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.atg-partners-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.atg-partners-header p {
+  font-size: 15.5px;
+  color: #475569;
+}
+
+.atg-partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.atg-partner-card {
+  /* background: var(--atg-card-bg); */
+  border-radius: 14px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.atg-partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(11, 44, 93, 0.2);
+}
+
+.atg-partner-card img {
+  max-width: 70%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: none;
+  transition: 0.3s ease;
+}
+
+.atg-partner-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .atg-partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .atg-partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .atg-partners-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atg-partners-header h2 {
+    font-size: 28px;
+  }
+}
+
+/* ===============================
+Al Taqwa Group – CTA Section
+Modern & Responsive
+================================ */
+
+.atg-cta-section {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb) !important;
+  text-align: center;
+}
+
+.atg-cta-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.atg-cta-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.atg-cta-section p {
+  font-size: 15.5px;
+  color: #e5e7eb;
+  margin-bottom: 40px;
+}
+
+.atg-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--atg-yellow);
+  color: #fff;
+  background-color: #f59e0f;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(0.92); /* zoom out */
+  background-color: rgb(211 138 16);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.btn-outline:hover {
+  opacity: 0.6; /* fade */
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .atg-cta-section h2 {
+    font-size: 30px;
+  }
+
+  .atg-cta-section p {
+    font-size: 16px;
+  }
+}
