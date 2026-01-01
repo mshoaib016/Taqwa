@@ -906,8 +906,13 @@ html {
   .mp-box-features {
     flex-direction: column;
   }
-  .mp-box-wrapper {
-    padding: 40px 25px;
+  @media (max-width: 768px) {
+    .mp-box-wrapper {
+      margin-left: 16px;
+      margin-right: 16px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }
 .atg-why-section {
