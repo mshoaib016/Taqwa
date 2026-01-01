@@ -1,5 +1,5 @@
 :root {
-  --primary: #f59e0b;
+  --primary: #d2b16f;
   --text-light: #cbd5e1;
   --text-muted: #94a3b8;
   --footer-bg: #020617;
@@ -48,7 +48,7 @@
 
 .hamburger span {
   height: 3px;
-  background: #1f3fbf;
+  background: #0b2c5d;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -60,7 +60,7 @@
   right: -100%;
   width: 250px;
   height: 100vh;
-  background: #1f3fbf;
+  background: #0b2c5d;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -109,10 +109,15 @@
   gap: 12px;
 }
 
+.logo-img {
+  width: 130px;
+  height: auto;
+}
+
 .logo-circle {
   width: 45px;
   height: 45px;
-  background: #1f3fbf;
+  background: #0b2c5d;
   color: #fff;
   font-weight: 600;
   border-radius: 50%;
@@ -123,7 +128,7 @@
 
 .logo-text h3 {
   font-size: 16px;
-  color: #1f3fbf;
+  color: #0b2c5d;
 }
 
 .logo-text p {
@@ -157,7 +162,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: #f5a623;
+  background: #d2b16f;
   transition: width 0.3s ease;
 }
 
@@ -167,7 +172,7 @@
 }
 
 .nav-menu a:hover {
-  color: #f5a623; /* Text color changes on hover */
+  color: #d2b16f; /* Text color changes on hover */
 }
 
 /* Active link underline (always visible) */
@@ -177,7 +182,7 @@
 
 /* Call Button */
 .header-btn a {
-  background: #1f3fbf;
+  background: #0b2c5d;
   color: #fff;
   padding: 8px 16px;
   border-radius: 8px;
@@ -194,7 +199,7 @@
 /* ===== Orange Bar ===== */
 /* ===== Top Bar ===== */
 .top-bar {
-  background: linear-gradient(to right, #f9a602, #f7931e);
+  background: #d2b16f;
   padding: 10px 40px;
 }
 
@@ -212,7 +217,7 @@
   border-radius: 8px;
   font-size: 14px;
   font-weight: 700;
-  border: 2px solid #1f3fbf; /* Border added */
+  border: 2px solid #0b2c5d; /* Border added */
   display: flex;
   align-items: center;
   justify-content: center; /* Center text */
@@ -220,7 +225,7 @@
 }
 
 .phone:hover {
-  background: rgb(30 58 138 / var(--tw-text-opacity, 1));
+  background: #0b2c5d;
   color: #fff;
   cursor: pointer;
 }
@@ -244,7 +249,7 @@
   background: #fff;
   padding: 4px 16px;
   border-radius: 8px;
-  border: 2px solid #1f3fbf; /* Border added */
+  border: 2px solid #0b2c5d; /* Border added */
   font-size: 14px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -269,7 +274,7 @@
 
 /* Dropdown hover */
 .lang select:hover {
-  background: #f5a623;
+  background: #0b2c5d;
   color: #fff;
 }
 
@@ -302,7 +307,7 @@
 }
 
 .trusted-label {
-  background: rgba(245, 166, 35, 0.9);
+  background: #0b2c5d;
   color: #fff;
   padding: 8px 10px;
   border-radius: 20px;
@@ -319,7 +324,7 @@
 }
 
 .hero-content h1 span {
-  color: #1f3fbf;
+  color: #0b2c5d;
 }
 
 .hero-content p {
@@ -344,7 +349,7 @@
 }
 
 .call-btn {
-  background: #f5a623;
+  background: #d2b16f;
   color: #fff;
 }
 
@@ -355,12 +360,12 @@
 .service-btn {
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #d2b16f;
 }
 
 .service-btn:hover {
-  background: #fff;
-  color: #1f3fbf;
+  background: #d2b16f;
+  color: #0b2c5d;
 }
 
 .hero-stats {
@@ -373,7 +378,7 @@
 .stat h2 {
   font-size: 28px;
   font-weight: 700;
-  color: #f5a623;
+  color: #d2b16f;
 }
 
 .stat p {
@@ -389,7 +394,7 @@
   background: #fff;
   border-radius: 14px;
   padding: 10px 18px; /* ⬅ left/right + bottom space kam */
-  color: rgb(30 58 138 / var(--tw-text-opacity, 1));
+  color: #0b2c5d;
   font-weight: 500;
 }
 
@@ -448,37 +453,46 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Typography */
   .hero-content h1 {
-    font-size: 48px;
+    font-size: 32px; /* 48 mobile ke liye zyada hai */
+    line-height: 1.3;
   }
+
+  /* Layout fixes */
   .hero-stats {
     flex-direction: column;
     gap: 20px;
   }
+
   .visitor-card {
     flex-direction: column;
     gap: 10px;
   }
+
   .hero-buttons {
     flex-direction: column;
     gap: 15px;
   }
-}
-@media (max-width: 768px) {
+
+  /* Header */
   .main-header {
     padding: 12px 20px;
   }
 
   .top-bar {
-    top: 65px; /* mobile header thora chota */
+    top: 65px;
     padding: 8px 20px;
   }
 
+  /* ✅ HERO MOBILE FIX */
   .hero-section {
-    margin-top: 170px; /* MOBILE FIX */
+    margin-top: 0; /* remove hard margin */
+    padding-top: 170px; /* header + topbar space */
     height: calc(100vh - 170px);
   }
 
+  /* Navigation */
   .nav-menu {
     display: none;
   }
@@ -487,10 +501,11 @@
     display: flex;
   }
 }
+
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: #0b2c5d;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s ease;
@@ -598,7 +613,7 @@
   padding: 28px 22px;
   border-radius: 16px;
   text-align: left;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); */
   border: 2px solid rgba(30, 58, 138, 0.1);
   outline-color: hsl(var(--ring) / 0.5);
   transition: 0.3s ease;
@@ -610,7 +625,7 @@
 /* card move up */
 .service-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(30, 64, 175, 0.18);
+  box-shadow: 0 18px 40px #d2b16f;
 }
 
 /* Hover effect layer */
@@ -621,7 +636,7 @@
   right: -60px;
   width: 160px;
   height: 160px;
-  background: rgba(30, 64, 175, 0.08);
+  background: #d2b16f;
   border-radius: 50%;
   opacity: 0;
   transition: opacity 0.35s ease;
@@ -633,12 +648,17 @@
 }
 
 .service-card:hover {
-  box-shadow: 0 18px 40px rgba(30, 64, 175, 0.18);
+  box-shadow: 0 18px 40px #d5bf91;
 }
 
 /* icon smooth animation */
 .service-card .icon {
   transition: transform 0.35s ease;
+  .service-card .icon {
+    width: 70px; /* icon box size */
+    height: 70px;
+    font-size: 32px; /* icon size */
+  }
 }
 
 /* jab card hover ho */
@@ -649,7 +669,7 @@
 .icon {
   width: 56px;
   height: 56px;
-  background: #1e40af;
+  background: #fef3c7 var(--tw-gradient-to-position);
   color: #fff;
   border-radius: 14px;
   display: flex;
@@ -777,7 +797,8 @@
 }
 
 .manpower-icon img {
-  width: 24px;
+  width: 50px;
+  height: auto;
 }
 
 .manpower-card h3 {
@@ -797,7 +818,7 @@
 .mp-box-wrapper {
   max-width: 1150px;
   margin: 60px auto;
-  background: linear-gradient(135deg, #1e3a8a, #1e40af);
+  background: #0b2c5d;
   border-radius: 20px;
   padding: 35px 90px;
   color: #fff;
@@ -835,8 +856,8 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: rgb(251 191 36 / var(--tw-text-opacity, 1));
-  color: #1e3a8a;
+  background: #d2b16f;
+  color: #0b2c5d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -851,7 +872,7 @@
 }
 
 .mp-box-btn a {
-  background: #f59e0b;
+  background: #d2b16f;
   color: #fff;
   text-decoration: none;
   padding: 14px 28px;
@@ -865,7 +886,7 @@
 }
 
 .mp-box-btn a:hover {
-  background: #d97706;
+  background: #5e5543;
 }
 
 /* RESPONSIVE */
@@ -904,10 +925,7 @@
   }
 }
 
-/* ===============================
-   Al Taqwa Group - Scoped CSS
-   No Conflict Guaranteed
-================================ */
+/* Taqwa Group - Scoped CSS  No Conflict Guaranteed */
 
 :root {
   --atg-primary: #0b2c5d;
@@ -938,7 +956,7 @@ body {
 .atg-header h2 {
   font-size: 40px;
   font-weight: 700;
-  color: #0f172a;
+  color: #0b2c5d;
 }
 
 .atg-header p {
@@ -963,7 +981,7 @@ body {
 
 .atg-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 45px rgba(11, 44, 93, 0.25);
+  box-shadow: 0 20px 45px #d2b16f;
 }
 
 .atg-icon {
@@ -1013,7 +1031,7 @@ body {
 }
 
 /* ===============================
-Al Taqwa Group – Trusted Partners
+Taqwa Group – Trusted Partners
 Scoped & Responsive CSS
 ================================ */
 
@@ -1108,9 +1126,10 @@ Modern & Responsive
 
 .atg-cta-section {
   padding: 50px 20px;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb) !important;
+  background: #0f172a;
   text-align: center;
-  margin-bottom: 90px;
+  margin-top: 80px;
+  margin-bottom: 100px;
 }
 
 .atg-cta-container {
@@ -1153,13 +1172,13 @@ Modern & Responsive
 .btn-primary {
   background: var(--atg-yellow);
   color: #fff;
-  background-color: #f59e0f;
+  background-color: #d2b16f;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .btn-primary:hover {
   transform: scale(0.92); /* zoom out */
-  background-color: rgb(211 138 16);
+  background-color: #5e5543;
   color: #fff;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
@@ -1172,6 +1191,7 @@ Modern & Responsive
 .btn-outline:hover {
   opacity: 0.6; /* fade */
   transform: translateY(-2px);
+  background-color: #128C7E;
 }
 
 /* Responsive */
@@ -1257,7 +1277,7 @@ Al Taqwa Group – Modern Footer
 .atg-footer-col ul li a {
   color: rgb(148 163 184 / var(--tw-text-opacity, 1));
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -1286,7 +1306,7 @@ Al Taqwa Group – Modern Footer
   padding-top: 20px;
   margin-top: 40px;
   padding-bottom: 40px;
-  color:  rgb(148 163 184 / var(--tw-text-opacity, 1));
+  color: rgb(148 163 184 / var(--tw-text-opacity, 1));
 }
 
 /* CENTER LINE */
@@ -1299,6 +1319,74 @@ Al Taqwa Group – Modern Footer
   margin: 0 auto 18px;
 }
 
+/* WhatsApp Wave Animation NO HTML change required */
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  z-index: 100;
+}
+
+.whatsapp-icon::before,
+.whatsapp-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.35); /* WhatsApp green */
+  animation: wa-pulse 2.5s infinite;
+  z-index: -1;
+}
+
+.whatsapp-icon::after {
+  animation-delay: 1.25s;
+}
+
+/* =========================
+   Manpower Card – Image Zoom
+   Icon image excluded
+========================= */
+
+.manpower-card {
+  overflow: hidden;
+}
+
+/* ONLY main background image */
+.manpower-card > img {
+  transition: transform 0.6s ease;
+}
+
+.manpower-card:hover > img {
+  transform: scale(1.15);
+}
+
+/* Icon image stays normal */
+.manpower-icon img {
+  transform: none !important;
+}
+
+@keyframes wa-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.whatsapp-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .atg-footer-container {
@@ -1309,5 +1397,126 @@ Al Taqwa Group – Modern Footer
 @media (max-width: 600px) {
   .atg-footer-container {
     grid-template-columns: 1fr;
+  }
+}
+/* GLOBAL MOBILE SAFETY FIX */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* HEADER + TOP BAR (NO OVERLAP) */
+@media (max-width: 768px) {
+  .main-header {
+    height: 65px;
+    padding: 12px 16px;
+  }
+
+  .top-bar {
+    top: 65px;
+    padding: 8px 16px;
+  }
+}
+/* HERO SECTION (MOST IMPORTANT FIX) */
+@media (max-width: 768px) {
+  .hero-section {
+    margin-top: 0;
+    padding-top: 160px; /* header + top bar */
+    min-height: calc(100vh - 160px);
+    height: auto;
+  }
+
+  .hero-content {
+    padding: 20px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+}
+/* HERO STATS + VISITOR CARD */
+@media (max-width: 768px) {
+  .hero-stats {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .visitor-card {
+    width: 100%;
+    gap: 12px;
+  }
+}
+/* SERVICES SECTION (NO CUT / NO CROWD) */
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 30px;
+    margin-top: 0;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    margin-bottom: 35px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+/* MANPOWER SECTION */
+@media (max-width: 768px) {
+  .manpower-section h2 {
+    font-size: 28px;
+  }
+
+  .manpower-section p {
+    font-size: 14px;
+  }
+
+  .manpower-card {
+    height: 260px;
+  }
+}
+/* WHY ATG + PARTNERS */
+@media (max-width: 768px) {
+  .atg-header h2,
+  .atg-partners-header h2 {
+    font-size: 28px;
+  }
+
+  .atg-grid,
+  .atg-partners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* CTA SECTION */
+@media (max-width: 768px) {
+  .atg-cta-section h2 {
+    font-size: 28px;
+  }
+
+  .atg-cta-buttons {
+    flex-direction: column;
+  }
+}
+/* FOOTER MOBILE FIX */
+@media (max-width: 768px) {
+  .atg-footer {
+    padding-bottom: 40px;
+  }
+
+  .atg-footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
