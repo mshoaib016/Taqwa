@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #fff;
+      }
+
+      /* ===== ABOUT HERO SECTION ===== */
+      .about-hero {
+        margin-top: 125px;
+        position: relative;
+        height: 280px;
+        background: url("assets/about\ img.jpg") center/cover no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      /* CONTENT */
+      .about-hero-content {
+        position: relative;
+        z-index: 2;
+        color: #f5f7fb;
+        padding: 0 16px;
+      }
+
+      .about-hero-content h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #d2b16f;
+      }
+
+      .about-hero-content p {
+        font-size: 16px;
+        opacity: 0.95;
+        color: #d2b16f;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .about-hero {
+          height: 220px;
+        }
+
+        .about-hero-content h1 {
+          font-size: 28px;
+        }
+
+        .about-hero-content p {
+          font-size: 14px;
+        }
+      }
+      .mv-section {
+        padding: 80px 20px;
+      }
+
+      .mv-container {
+        max-width: 900px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .mv-card {
+        background: #f5f7fb;
+        border-radius: 16px;
+        padding: 40px 35px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .mv-vision {
+        background: #fffaf0;
+      }
+
+      .mv-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .mv-icon img {
+        width: 28px;
+      }
+
+      .mv-icon.blue {
+        background: #2f55d4;
+      }
+
+      .mv-icon.orange {
+        background: #f59e0b;
+      }
+
+      .mv-card h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #111827;
+      }
+
+      .mv-card p {
+        font-size: 12px;
+        line-height: 1.7;
+        color: #4b5563;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .mv-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* SECTION */
+      .values-section {
+        padding: 90px 20px;
+        text-align: center;
+      }
+
+      .values-title {
+        font-size: 32px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 60px;
+      }
+
+      /* GRID */
+      .values-container {
+        max-width: 1000px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      /* CARD */
+      .value-card {
+        background: #f5f7fb;
+        border-radius: 16px;
+        padding: 40px 30px;
+        transition: 0.3s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px #d2b16f;
+      }
+
+      /* ICON */
+      .value-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+      }
+
+      .value-icon img {
+        width: 35px;
+      }
+
+      /* TEXT */
+      .value-card h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 12px;
+      }
+
+      .value-card p {
+        font-size: 12px;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 992px) {
+        .values-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .values-container {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* track-record.css */
+      .track-record {
+        margin-top: 30px;
+        margin-bottom: 150px;
+      }
+      /* SECTION */
+      .track-record {
+        background: #0f172a;
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      /* TITLE */
+      .track-record h2 {
+        color: #ffffff;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 50px;
+      }
+
+      /* GRID */
+      .track-grid {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      /* ITEM */
+      .track-item {
+        color: #ffffff;
+      }
+
+      .track-item .number {
+        display: block;
+        font-size: 40px;
+        font-weight: 700;
+        color: #d2b16f;
+        margin-bottom: 8px;
+      }
+
+      .track-item p {
+        font-size: 12px;
+        letter-spacing: 0.3px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .track-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .track-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      /* Why Choose Us Section */
+
+      /* SECTION */
+      .why-choose {
+        max-width: 800px;
+        margin: auto;
+        padding: 0px 0px 90px;
+        text-align: center;
+      }
+
+      /* TITLE */
+      .why-choose h2 {
+        font-size: 34px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 10px;
+      }
+
+      /* DESCRIPTION */
+      .why-desc {
+        max-width: 820px;
+        margin: 0 auto 20px;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #4a5a73;
+      }
+
+      /* GRID */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 28px;
+        margin-bottom: 30px;
+      }
+
+      /* ITEM */
+      .why-item {
+        background: #f5f7fb;
+        padding: 16px 22px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #0b1f44;
+        text-align: left;
+        position: relative;
+        padding-left: 36px;
+      }
+
+      /* ORANGE DOT */
+      .why-item::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background: #d2b16f;
+        border-radius: 50%;
+        position: absolute;
+        left: 18px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* BUTTON */
+      .why-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #0f172a;
+        color: #ffffff;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 768px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .why-choose h2 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/971566492601" target="_blank" class="whatsapp-icon">
+      <img src="assets/whatsApp.png" alt="WhatsApp" />
+    </a>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo-area">
+        <img
+          src="assets/Taqwa header logo.png"
+          alt="Taqwa Group Logo"
+          class="logo-img"
+        />
+        <div class="logo-text"></div>
+      </div>
+
+      <!-- Navigation (Desktop) -->
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="header-right">
+        <div class="header-btn">
+          <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا"
+            >Call Us</a
+          >
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="phone">📞 <a href="tel:0566492601">0566492601</a></div>
+
+        <div class="lang">
+          <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- ===== ABOUT HERO ===== -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <h1>About</h1>
+        <p>Your Trusted Partner in UAE Business Solutions</p>
+      </div>
+    </section>
+    <section class="mv-section">
+      <div class="mv-container">
+        <!-- Mission -->
+        <div class="mv-card mv-mission">
+          <div class="mv-icon blue">
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" />
+          </div>
+          <h3>Our Mission</h3>
+          <p>
+            To provide exceptional PRO services and comprehensive <br />
+            business solutions that empower our clients to succeed in <br />
+            the UAE market. We are committed to delivering <br />
+            professional, efficient, and reliable services that exceed <br />
+            expectations.
+          </p>
+        </div>
+
+        <!-- Vision -->
+        <div class="mv-card mv-vision">
+          <div class="mv-icon orange">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+            />
+          </div>
+          <h3>Our Vision</h3>
+          <p>
+            To be the most trusted and preferred PRO services provider <br />
+            in the UAE, known for integrity, expertise, and <br />
+            commitment to client success.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="values-section">
+      <h2 class="values-title">Our Core Values</h2>
+
+      <div class="values-container">
+        <!-- Card 1 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png"
+            />
+          </div>
+          <h3>Integrity</h3>
+          <p>
+            We operate with complete transparency and honesty in all our
+            dealings
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" />
+          </div>
+          <h3>Excellence</h3>
+          <p>We strive for the highest quality in every service we provide</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" />
+          </div>
+          <h3>Client-Focused</h3>
+          <p>Your success and satisfaction are our top priorities</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="value-card">
+          <div class="value-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" />
+          </div>
+          <h3>Efficiency</h3>
+          <p>
+            We deliver fast and reliable solutions without compromising quality
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Order track -->
+    <section class="track-record">
+      <h2>Our Track Record</h2>
+
+      <div class="track-grid">
+        <div class="track-item">
+          <span class="number">500+</span>
+          <p>Happy Clients</p>
+        </div>
+
+        <div class="track-item">
+          <span class="number">10+</span>
+          <p>Years Experience</p>
+        </div>
+
+        <div class="track-item">
+          <span class="number">1000+</span>
+          <p>Services Completed</p>
+        </div>
+
+        <div class="track-item">
+          <span class="number">100%</span>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+      <h2>Why Choose Us</h2>
+
+      <p class="why-desc">
+        Taqwa Group of Companies brings together a team of experienced
+        professionals who understand the complexities of UAE business
+        regulations and procedures. We handle all your PRO services with
+        expertise and care, allowing you to focus on growing your business.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-item">Licensed and certified professionals</div>
+        <div class="why-item">Deep knowledge of UAE regulations</div>
+
+        <div class="why-item">Bilingual support (English & Arabic)</div>
+        <div class="why-item">Fast processing times</div>
+
+        <div class="why-item">Competitive pricing</div>
+        <div class="why-item">24/7 customer support</div>
+      </div>
+
+      <a href="#" class="why-btn"> <span>📞</span> Get in Touch </a>
+    </section>
+    <!-- footer code -->
+    <footer class="atg-footer">
+      <div class="atg-footer-container">
+        <!-- Company Info -->
+        <div class="atg-footer-col">
+          <div class="atg-brand">
+            <span class="atg-logo">
+              <img src="assets/Taqwa fav icon.png" alt="Taqwa Group Logo" />
+            </span>
+            <div class="atg-brand-text">
+              <h3>Taqwa Group</h3>
+              <small>Since 2015</small>
+            </div>
+          </div>
+
+          <p class="atg-desc">
+            Providing comprehensive PRO services, business setup, visa services,
+            <br />
+            and more across the UAE. Your success is our priority.
+          </p>
+
+          <a href="mailto:Taqwagroup.services@gmail.com" class="atg-email">
+            Taqwagroup.services@gmail.com
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="atg-footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="atg-footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="fa-solid fa-phone"></i> 0566492601</p>
+          <p><i class="Name"></i> Muhammad Zeeshan</p>
+          <p><i class="fa-solid fa-phone"></i> 0569786608</p>
+          <p><i class="name"></i> Sheikh sab</p>
+
+          <!-- <p><i class="fa-solid fa-location-dot"></i> United Arab Emirates</p> -->
+        </div>
+      </div>
+
+      <div class="atg-footer-bottom">
+        © 2025 Al Taqwa Group of Companies. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
