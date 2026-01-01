@@ -1119,11 +1119,7 @@ Scoped & Responsive CSS
   }
 }
 
-/* ===============================
-Al Taqwa Group – CTA Section
-Modern & Responsive
-================================ */
-
+/* Taqwa Group – CTA Section Modern & Responsive */
 .atg-cta-section {
   padding: 50px 20px;
   background: #0f172a;
@@ -1191,7 +1187,7 @@ Modern & Responsive
 .btn-outline:hover {
   opacity: 0.6; /* fade */
   transform: translateY(-2px);
-  background-color: #128C7E;
+  background-color: #128c7e;
 }
 
 /* Responsive */
@@ -1205,9 +1201,7 @@ Modern & Responsive
   }
 }
 
-/* ===============================
-Al Taqwa Group – Modern Footer
-================================ */
+/* Taqwa Group – Modern Footer */
 
 .atg-footer-container {
   max-width: 1200px;
@@ -1217,7 +1211,7 @@ Al Taqwa Group – Modern Footer
 }
 
 .atg-footer {
-  background: radial-gradient(circle at top left, #1e3a8a, #020617 60%);
+  background: #0f172a;
   padding-top: 50px;
   font-size: 14px;
 }
@@ -1225,31 +1219,36 @@ Al Taqwa Group – Modern Footer
 .atg-brand {
   display: flex;
   align-items: center; /* vertical center */
-  gap: 14px; /* logo aur text ke darmiyan space */
+  gap: 8px; /* logo aur text ke darmiyan space */
 }
 
 .atg-logo {
-  width: 45px;
-  height: 45px;
-  background: #f59e0b;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 50%;
+  width: 90px; /* ✔ exact logo size */
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0; /* logo shrink nahi hoga */
+  overflow: hidden;
+}
+
+.atg-logo img {
+  max-width: 110%;
+  max-height: 110%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  position: static; /* ❌ left:-32px remove */
 }
 
 .atg-brand-text h3 {
   font-family: serif;
-  font-size: 16px;
+  font-size: 25px;
   color: #ffffff;
   line-height: 1.2;
 }
 
 .atg-brand-text small {
-  color: #f59e0b;
+  color: #d2b16f;
   font-size: 12px;
 }
 
@@ -1271,7 +1270,7 @@ Al Taqwa Group – Modern Footer
 }
 
 .atg-footer-col ul li {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
 }
 
 .atg-footer-col ul li a {
@@ -1282,7 +1281,7 @@ Al Taqwa Group – Modern Footer
 }
 
 .atg-footer-col ul li a:hover {
-  color: #f59e0b;
+  color: #d2b16f;
 }
 
 .atg-footer-col p {
@@ -1345,10 +1344,7 @@ Al Taqwa Group – Modern Footer
   animation-delay: 1.25s;
 }
 
-/* =========================
-   Manpower Card – Image Zoom
-   Icon image excluded
-========================= */
+/* Manpower Card – Image Zoom    Icon image excluded */
 
 .manpower-card {
   overflow: hidden;
@@ -1366,6 +1362,25 @@ Al Taqwa Group – Modern Footer
 /* Icon image stays normal */
 .manpower-icon img {
   transform: none !important;
+}
+
+/* Hero Text Zoom on Load */
+
+.hero-content {
+  animation: heroZoom 1.2s ease-out forwards;
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+@keyframes heroZoom {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes wa-pulse {
@@ -1517,6 +1532,68 @@ Al Taqwa Group – Modern Footer
 
   .atg-footer-container {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+/* Base safety (no horizontal scroll) */
+@media (max-width: 768px) {
+  .atg-footer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+/* Footer columns stack properly (MOST IMPORTANT) */
+@media (max-width: 768px) {
+  .atg-footer-container {
+    grid-template-columns: 1fr; /* single column */
+    gap: 32px;
+    text-align: left;
+  }
+}
+/* Logo + brand alignment fix */
+@media (max-width: 768px) {
+  .atg-brand {
+    align-items: flex-start;
+  }
+
+  .atg-brand-text h3 {
+    font-size: 15px;
+  }
+
+  .atg-brand-text small {
+    font-size: 12px;
+  }
+}
+/* Footer text & links spacing */
+@media (max-width: 768px) {
+  .atg-footer-col h4 {
+    margin-bottom: 12px;
+  }
+
+  .atg-footer-col ul li {
+    margin-bottom: 8px;
+  }
+
+  .atg-footer-col p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+/* Footer bottom (copyright line) */
+@media (max-width: 768px) {
+  .atg-footer-bottom {
+    font-size: 12px;
+    padding-bottom: 30px;
+  }
+
+  .atg-footer-bottom::before {
+    width: 100%;
+  }
+}
+/* TABLET FIX (iPad etc.) */
+@media (max-width: 992px) {
+  .atg-footer-container {
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
   }
 }
