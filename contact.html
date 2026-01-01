@@ -1,15 +1,425 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-     <!-- WhatsApp -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* ===== ABOUT HERO SECTION ===== */
+
+      .about-hero {
+        margin-top: 125px;
+        position: relative;
+        height: 280px;
+        background: #111827;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+
+      /* CONTENT */
+      .about-hero-content {
+        position: relative;
+        z-index: 2;
+        color: #f5f7fb;
+        padding: 0 16px;
+      }
+
+      .about-hero-content h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #d2b16f;
+      }
+
+      .about-hero-content p {
+        font-size: 16px;
+        opacity: 0.95;
+        color: #d2b16f;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 768px) {
+        .about-hero {
+          height: 220px;
+        }
+
+        .about-hero-content h1 {
+          font-size: 28px;
+        }
+
+        .about-hero-content p {
+          font-size: 14px;
+        }
+      }
+
+      .contact-section {
+        padding: 80px 20px;
+      }
+
+      .contact-container {
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+
+      /* FORM */
+      .contact-form {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px #d2b16f;
+      }
+
+      .contact-form h3 {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .contact-form label {
+        font-size: 13px;
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 14px;
+        border-radius: 6px;
+        border: 1px solid #e5e7eb;
+        font-size: 13px;
+      }
+
+      .contact-form textarea {
+        height: 90px;
+        resize: none;
+      }
+
+      .send-btn {
+        width: 100%;
+        background: #0f172a;
+        color: #fff;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      /* RIGHT SIDE */
+      .contact-right {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      /* INFO BOX */
+      .info-box {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px #d2b16f;
+      }
+
+      .info-box h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .info-item {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 16px;
+      }
+
+      .icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+
+      .phone {
+        background: #e0ecff;
+      }
+      .email {
+        background: #fff3cd;
+      }
+      .location {
+        background: #e6fffa;
+      }
+      .time {
+        background: #f3e8ff;
+      }
+
+      .info-item strong {
+        font-size: 13px;
+      }
+
+      .info-item p {
+        font-size: 12px;
+        color: #555;
+      }
+
+      /* QUICK CONTACT */
+      .quick-contact {
+        background: #0f172a;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px #d2b16f;
+      }
+
+      .quick-contact h3 {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .call-btn {
+        display: block;
+        background: #d2b16f;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 13px;
+        margin-bottom: 12px;
+        text-decoration: none;
+      }
+
+      .whatsapp-btn {
+        display: block;
+        background: #22c55e;
+        color: #fff;
+        text-align: center;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 13px;
+        text-decoration: none;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .contact-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      
+
+    </style>
+  </head>
+  <body>
+    <!-- WhatsApp -->
     <a href="https://wa.me/971566492601" target="_blank" class="whatsapp-icon">
       <img src="assets/whatsApp.png" alt="WhatsApp" />
     </a>
-</body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo-area">
+        <img
+          src="assets/Taqwa header logo.png"
+          alt="Taqwa Group Logo"
+          class="logo-img"
+        />
+        <div class="logo-text"></div>
+      </div>
+
+      <!-- Navigation (Desktop) -->
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="header-right">
+        <div class="header-btn">
+          <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا"
+            >Call Us</a
+          >
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="phone">📞 <a href="tel:0566492601">0566492601</a></div>
+
+        <div class="lang">
+          <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- ===== ABOUT HERO ===== -->
+    <section class="about-hero">
+      <div class="about-hero-content">
+        <h1>Contact Us</h1>
+        <p>Get in touch with us for any inquiries or assistance</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- LEFT FORM -->
+        <div class="contact-form">
+          <h3>Send us a Message</h3>
+
+          <label>Full Name</label>
+          <input type="text" placeholder="Full Name" />
+
+          <label>Email Address</label>
+          <input type="email" placeholder="Email Address" />
+
+          <label>Phone Number</label>
+          <input type="text" placeholder="+971 XXX XXX XXX" />
+
+          <label>Service Interested In</label>
+          <input type="text" placeholder="e.g. Business Setup" />
+
+          <label>Your Message</label>
+          <textarea placeholder="Your Message"></textarea>
+
+          <button class="send-btn">✈ Send Message</button>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="contact-right">
+          <!-- INFO BOX -->
+          <div class="info-box">
+            <h3>Contact Information</h3>
+
+            <div class="info-item">
+              <span class="icon phone">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+971 555 443 007</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <span class="icon email">✉</span>
+              <div>
+                <strong>Email</strong>
+                <p>Taqwagroup.services@gmail.com</p>
+              </div>
+            </div>
+
+            <!-- <div class="info-item">
+              <span class="icon location">📍</span>
+              <div>
+                <strong>Location</strong>
+                <p>United Arab Emirates</p>
+              </div>
+            </div> -->
+
+            <div class="info-item">
+              <span class="icon time">⏰</span>
+              <div>
+                <strong>Business Hours</strong>
+                <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUICK CONTACT -->
+          <div class="quick-contact">
+            <h3>Quick Contact</h3>
+            <a href="tel:+971555443007" class="call-btn">📞 Call Now</a>
+            <a href="#" class="whatsapp-btn">🟢 WhatsApp Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="atg-footer">
+      <div class="atg-footer-container">
+        <!-- Company Info -->
+        <div class="atg-footer-col">
+          <div class="atg-brand">
+            <span class="atg-logo">
+              <img src="assets/Taqwa fav icon.png" alt="Taqwa Group Logo" />
+            </span>
+            <div class="atg-brand-text">
+              <h3>Taqwa Group</h3>
+              <small>Since 2015</small>
+            </div>
+          </div>
+
+          <p class="atg-desc">
+            Providing comprehensive PRO services, business setup, visa services,
+            <br />
+            and more across the UAE. Your success is our priority.
+          </p>
+
+          <a href="mailto:Taqwagroup.services@gmail.com" class="atg-email">
+            Taqwagroup.services@gmail.com
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="atg-footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="atg-footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="fa-solid fa-phone"></i> 0566492601</p>
+          <p><i class="Name"></i> Muhammad Zeeshan</p>
+          <p><i class="fa-solid fa-phone"></i> 0569786608</p>
+          <p><i class="name"></i> Sheikh sab</p>
+
+          <!-- <p><i class="fa-solid fa-location-dot"></i> United Arab Emirates</p> -->
+        </div>
+      </div>
+
+      <div class="atg-footer-bottom">
+        © 2025 Al Taqwa Group of Companies. All rights reserved.
+      </div>
+    </footer>
+  </body>
 </html>
