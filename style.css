@@ -207,6 +207,14 @@ html {
   padding: 10px 40px;
 }
 
+.top-bar .phone a,
+.top-bar .phone a:hover,
+.top-bar .phone a:focus,
+.top-bar .phone a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 .top-bar-content {
   display: flex;
   align-items: center;
