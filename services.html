@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f5f7fb;
+      }
+
+      /* TOP BAR — sab se upar */
+      .top-bar {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #d2b16f;
+        padding: 10px 0;
+        z-index: 999;
+      }
+
+      /* HEADER — top bar ke neeche */
+      .main-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: #fff;
+        z-index: 1000;
+      }
+
+      /* ===== SERVICES HERO ===== */
+      .services-hero {
+        background: #0f172a;
+        color: #fff;
+        text-align: center;
+        padding: 60px 16px;
+      }
+
+      .services-hero {
+        padding-top: 180px;
+      }
+
+      .services-hero h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      .services-hero p {
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+        opacity: 0.95;
+      }
+
+      .services-hero .hero-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #d2b16f;
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+      }
+
+      .services-hero .hero-btn:hover {
+        background: #5e5543;
+        transform: translateY(-2px);
+      }
+
+      .services-page {
+        padding: 80px clamp(16px, 5vw, 6%);
+      }
+
+      .services-page {
+        padding: 80px 6%;
+        background: #f8fafc;
+      }
+
+      .services-title {
+        text-align: center;
+        font-size: 36px;
+        margin-bottom: 50px;
+        color: #0f172a;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+      /* MOBILE GRID FORCE FIX */
+
+      @media (max-width: 768px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .service-box {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px;
+        border: 2px solid #e5e7eb !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        transition: all 0.35s ease;
+      }
+
+      .service-box:hover {
+        border-color: #8a8c92; /* blue border */
+        box-shadow: 0 18px 45px #d2b16f;
+        transform: translateY(-10px);
+      }
+
+      .service-icon {
+        width: 56px;
+        height: 56px;
+        color: #fff;
+        font-size: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 14px;
+        margin-bottom: 20px;
+      }
+
+      .service-box h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      .service-box p {
+        font-size: 14px;
+        color: #475569;
+        margin-bottom: 15px;
+      }
+
+      .service-box ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .service-box ul li {
+        font-size: 14px;
+        color: #334155;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 18px;
+      }
+
+      .service-box ul li::before {
+        content: "➜";
+        position: absolute;
+        left: 0;
+        color: #f59e0b;
+      }
+
+      /* Highlight card (optional) */
+      .service-box.highlight {
+        border: 2px solid #93c5fd;
+      }
+
+      .atg-footer-container {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+      .atg-footer {
+        background: #0f172a;
+        padding-top: 50px;
+        font-size: 14px;
+      }
+
+      .atg-brand {
+        display: flex;
+        align-items: center; /* vertical center */
+        gap: 8px; /* logo aur text ke darmiyan space */
+      }
+
+      .atg-logo {
+        width: 90px; /* ✔ exact logo size */
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .atg-logo img {
+        max-width: 110%;
+        max-height: 110%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        position: static; /* ❌ left:-32px remove */
+      }
+
+      .atg-brand-text h3 {
+        font-family: serif;
+        font-size: 25px;
+        color: #ffffff;
+        line-height: 1.2;
+      }
+
+      .atg-brand-text small {
+        color: #d2b16f;
+        font-size: 12px;
+      }
+
+      .atg-email {
+        color: var(--primary);
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .atg-footer-col h4 {
+        color: var(--primary);
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .atg-footer-col ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .atg-footer-col ul li {
+        margin-bottom: 18px;
+      }
+
+      .atg-footer-col ul li a {
+        color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.3s;
+      }
+
+      .atg-footer-col ul li a:hover {
+        color: #d2b16f;
+      }
+
+      .atg-footer-col p {
+        font-size: 14px;
+        margin-bottom: 12px;
+        margin-top: 12px;
+        margin-right: 5px;
+        line-height: 1.9;
+        color: var(--text-light);
+      }
+
+      .atg-footer-col i {
+        color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+        margin-right: 8px;
+      }
+
+      .atg-footer-bottom {
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 40px;
+        padding-bottom: 40px;
+        color: rgb(148 163 184 / var(--tw-text-opacity, 1));
+      }
+      /* FIX HERO POSITION BELOW TOPBAR + HEADER */
+      .services-hero {
+        margin-top: 130px; /* adjust if needed */
+      }
+
+      /* GLOBAL RESPONSIVE BASE */
+      * {
+        box-sizing: border-box;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* TOP BAR RESPONSIVE */
+      @media (max-width: 768px) {
+        .top-bar {
+          top: 70px; /* mobile header thora chhota hota hai */
+        }
+
+      }
+
+      @media (max-width: 768px) {
+        .top-bar-content {
+          flex-direction: column;
+          gap: 8px;
+          text-align: center;
+        }
+
+        .top-bar {
+          padding: 8px 12px;
+        }
+      }
+      /* HEADER RESPONSIVE */
+
+      @media (max-width: 768px) {
+        .main-header {
+          height: 65px;
+        }
+
+        .top-bar {
+          top: 65px;
+        }
+
+        body {
+          padding-top: 125px;
+        }
+      }
+
+      .services-hero {
+        margin-top: 130px; /* desktop */
+      }
+
+      @media (max-width: 768px) {
+        .services-hero {
+          margin-top: 170px;
+        }
+
+        .services-hero h1 {
+          font-size: 28px;
+        }
+
+        .services-hero p {
+          font-size: 15px;
+        }
+      }
+      /* SERVICE CARD RESPONSIVE */
+      @media (max-width: 576px) {
+        .service-box {
+          padding: 22px;
+        }
+
+        .service-box h3 {
+          font-size: 18px;
+        }
+
+        .service-box p,
+        .service-box ul li {
+          font-size: 14px;
+        }
+      }
+      /* CTA SECTION RESPONSIVE */
+      .atg-cta-buttons {
+        display: flex;
+        gap: 16px;
+      }
+
+      @media (max-width: 576px) {
+        .atg-cta-buttons {
+          flex-direction: column;
+        }
+
+        .atg-cta-section {
+          padding: 60px 16px;
+          text-align: center;
+        }
+      }
+      /* FOOTER RESPONSIVE (IMPORTANT) */
+      @media (max-width: 992px) {
+        .atg-footer-container {
+          grid-template-columns: 1fr 1fr;
+          gap: 30px;
+        }
+      }
+
+      .atg-footer-container {
+        gap: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .atg-footer-container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .atg-brand {
+          justify-content: center;
+        }
+      }
+
+      /* WHATSAPP ICON RESPONSIVE */
+      @media (max-width: 576px) {
+        .whatsapp-icon {
+          right: 15px;
+          bottom: 15px;
+        }
+
+        .whatsapp-icon img {
+          width: 45px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- WhatsApp -->
+    <a href="https://wa.me/971566492601" target="_blank" class="whatsapp-icon">
+      <img src="assets/whatsApp.png" alt="WhatsApp" />
+    </a>
+    <!-- ===== SERVICES HERO SECTION ===== -->
+    <section class="services-hero">
+      <h1>Our Services</h1>
+      <p>
+        Comprehensive PRO and business solutions tailored for your success in
+        UAE
+      </p>
+
+      <a href="contact.html" class="hero-btn">
+        <i class="fa-solid fa-phone"></i>
+        Get a Free Consultation
+      </a>
+    </section>
+    <section class="services-page">
+      <div class="services-grid">
+        <!-- Card 1 -->
+        <div class="service-box">
+          <div class="service-icon">🏢</div>
+          <h3>New Business Setup</h3>
+          <p>Complete assistance in establishing your business in UAE</p>
+          <ul>
+            <li>Trade License Processing</li>
+            <li>Company Registration</li>
+            <li>MOA & AOA Preparation</li>
+            <li>Office Space Solutions</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-box">
+          <div class="service-icon">📄</div>
+          <h3>All Visa Services</h3>
+          <p>Fast and reliable visa processing for all categories</p>
+          <ul>
+            <li>Employment Visa</li>
+            <li>Investor Visa</li>
+            <li>Visit Visa</li>
+            <li>Visa Renewal & Cancellation</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-box highlight">
+          <div class="service-icon">🛡️</div>
+          <h3>Insurance Services</h3>
+          <p>Comprehensive insurance solutions for your peace of mind</p>
+          <ul>
+            <li>Health Insurance</li>
+            <li>Life Insurance</li>
+            <li>Vehicle Insurance</li>
+            <li>Business Insurance</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-box">
+          <div class="service-icon">👥</div>
+          <h3>Manpower Supply</h3>
+          <p>Skilled workforce solutions for your business</p>
+          <ul>
+            <li>Skilled Workers</li>
+            <li>Office Staff</li>
+            <li>Domestic Helpers</li>
+            <li>Temporary Staff</li>
+          </ul>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-box">
+          <div class="service-icon">📑</div>
+          <h3>PRO Services</h3>
+          <p>Government documentation & approvals</p>
+          <ul>
+            <li>Document Clearing</li>
+            <li>License Renewal</li>
+            <li>Government Approvals</li>
+            <li>Legal Assistance</li>
+          </ul>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-box">
+          <div class="service-icon">📊</div>
+          <h3>Accounting Services</h3>
+          <p>Professional accounting & bookkeeping</p>
+          <ul>
+            <li>Bookkeeping</li>
+            <li>VAT Filing</li>
+            <li>Audit Support</li>
+            <li>Financial Reports</li>
+          </ul>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="service-box">
+          <div class="service-icon">💻</div>
+          <h3>IT Solutions</h3>
+          <p>Modern IT solutions to grow your business</p>
+          <ul>
+            <li>Website Development</li>
+            <li>CRM Solutions</li>
+            <li>Cloud Services</li>
+            <li>IT Support</li>
+          </ul>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="service-box">
+          <div class="service-icon">📢</div>
+          <h3>Marketing Services</h3>
+          <p>Grow your brand with smart marketing</p>
+          <ul>
+            <li>Digital Marketing</li>
+            <li>SEO Optimization</li>
+            <li>Social Media</li>
+            <li>Brand Promotion</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="atg-cta-section">
+      <div class="atg-cta-container">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today for a free consultation</p>
+
+        <div class="atg-cta-buttons">
+          <a href="tel:0566492601" class="btn btn-primary">
+            <i class="fa-solid fa-phone"></i>
+            Contact Us Now
+          </a>
+          <a href="https://wa.me/971566492601" class="btn btn-outline">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HEADER ===== -->
+    <header class="main-header">
+      <!-- Logo -->
+      <div class="logo-area">
+        <img
+          src="assets/Taqwa header logo.png"
+          alt="Taqwa Group Logo"
+          class="logo-img"
+        />
+        <div class="logo-text"></div>
+      </div>
+
+      <!-- Navigation (Desktop) -->
+      <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Our Services</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="header-right">
+        <div class="header-btn">
+          <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا"
+            >Call Us</a
+          >
+        </div>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="phone">📞 <a href="tel:0566492601">0566492601</a></div>
+
+        <div class="lang">
+          <select id="languageSwitcher">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <footer class="atg-footer">
+      <div class="atg-footer-container">
+        <!-- Company Info -->
+        <div class="atg-footer-col">
+          <div class="atg-brand">
+            <span class="atg-logo">
+              <img src="assets/Taqwa fav icon.png" alt="Taqwa Group Logo" />
+            </span>
+            <div class="atg-brand-text">
+              <h3>Taqwa Group</h3>
+              <small>Since 2015</small>
+            </div>
+          </div>
+
+          <p class="atg-desc">
+            Providing comprehensive PRO services, business setup, visa services,
+            <br />
+            and more across the UAE. Your success is our priority.
+          </p>
+
+          <a href="mailto:Taqwagroup.services@gmail.com" class="atg-email">
+            Taqwagroup.services@gmail.com
+          </a>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="atg-footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="atg-footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="fa-solid fa-phone"></i> 0566492601</p>
+          <p><i class="Name"></i> Muhammad Zeeshan</p>
+          <p><i class="fa-solid fa-phone"></i> 0569786608</p>
+          <p><i class="name"></i> Sheikh sab</p>
+
+          <!-- <p><i class="fa-solid fa-location-dot"></i> United Arab Emirates</p> -->
+        </div>
+      </div>
+
+      <div class="atg-footer-bottom">
+        © 2025 Al Taqwa Group of Companies. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
