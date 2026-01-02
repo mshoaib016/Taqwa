@@ -45,14 +45,14 @@
       }
 
       .about-hero-content h1 {
-        font-size: 42px;
+        font-size: 50px;
         font-weight: 700;
         margin-bottom: 10px;
         color: #d2b16f;
       }
 
       .about-hero-content p {
-        font-size: 16px;
+        font-size: 18px;
         opacity: 0.95;
         color: #d2b16f;
       }
@@ -72,14 +72,12 @@
         }
       }
 
-
-
       .mv-section {
         padding: 80px 20px;
       }
 
       .mv-container {
-        max-width: 900px;
+        max-width: 1100px;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -87,14 +85,14 @@
       }
 
       .mv-card {
-        background: #f5f7fb;
+        background: #e8ecf6;
         border-radius: 16px;
         padding: 40px 35px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
       }
 
       .mv-vision {
-        background: #fffaf0;
+        background: #f9f0df;
       }
 
       .mv-icon {
@@ -154,7 +152,7 @@
 
       /* GRID */
       .values-container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -191,14 +189,14 @@
 
       /* TEXT */
       .value-card h3 {
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 600;
         color: #0f172a;
         margin-bottom: 12px;
       }
 
       .value-card p {
-        font-size: 12px;
+        font-size: 14px;
         color: #475569;
         line-height: 1.6;
       }
@@ -370,7 +368,6 @@
 
     <!-- ===== HEADER ===== -->
     <header class="main-header">
-      <!-- Logo -->
       <div class="logo-area">
         <img
           src="assets/Taqwa header logo.png"
@@ -380,15 +377,15 @@
         <div class="logo-text"></div>
       </div>
 
-      <!-- Navigation (Desktop) -->
       <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Our Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="services.html" data-en="Our Services" data-ar="خدماتنا"
+          >Our Services</a
+        >
+        <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+        <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
       </nav>
 
-      <!-- Right Side -->
       <div class="header-right">
         <div class="header-btn">
           <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا"
@@ -396,21 +393,18 @@
           >
         </div>
 
-        <!-- Hamburger -->
         <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </div>
       </div>
     </header>
 
     <!-- ===== MOBILE MENU ===== -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="services.html" data-en="Services" data-ar="الخدمات">Services</a>
+      <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+      <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
     </div>
 
     <div class="menu-overlay" id="menuOverlay"></div>
@@ -428,22 +422,32 @@
         </div>
       </div>
     </div>
+
     <!-- ===== ABOUT HERO ===== -->
     <section class="about-hero">
       <div class="about-hero-content">
-        <h1>About</h1>
-        <p>Your Trusted Partner in UAE Business Solutions</p>
+        <h1 data-en="About" data-ar="من نحن">About</h1>
+        <p
+          data-en="Your Trusted Partner in UAE Business Solutions"
+          data-ar="شريكك الموثوق في حلول الأعمال في دولة الإمارات"
+        >
+          Your Trusted Partner in UAE Business Solutions
+        </p>
       </div>
     </section>
+
+    <!-- Mission / Vision -->
     <section class="mv-section">
       <div class="mv-container">
-        <!-- Mission -->
         <div class="mv-card mv-mission">
           <div class="mv-icon blue">
             <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" />
           </div>
-          <h3>Our Mission</h3>
-          <p>
+          <h3 data-en="Our Mission" data-ar="مهمتنا">Our Mission</h3>
+          <p
+            data-en="To provide exceptional PRO services and comprehensive business solutions..."
+            data-ar="تقديم خدمات PRO استثنائية وحلول أعمال متكاملة..."
+          >
             To provide exceptional PRO services and comprehensive <br />
             business solutions that empower our clients to succeed in <br />
             the UAE market. We are committed to delivering <br />
@@ -452,15 +456,17 @@
           </p>
         </div>
 
-        <!-- Vision -->
         <div class="mv-card mv-vision">
           <div class="mv-icon orange">
             <img
               src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
             />
           </div>
-          <h3>Our Vision</h3>
-          <p>
+          <h3 data-en="Our Vision" data-ar="رؤيتنا">Our Vision</h3>
+          <p
+            data-en="To be the most trusted and preferred PRO services provider..."
+            data-ar="أن نكون المزود الأكثر ثقة لخدمات PRO في الإمارات..."
+          >
             To be the most trusted and preferred PRO services provider <br />
             in the UAE, known for integrity, expertise, and <br />
             commitment to client success.
@@ -468,8 +474,15 @@
         </div>
       </div>
     </section>
+
     <section class="values-section">
-      <h2 class="values-title">Our Core Values</h2>
+      <h2
+        class="values-title"
+        data-en="Our Core Values"
+        data-ar="قيمنا الأساسية"
+      >
+        Our Core Values
+      </h2>
 
       <div class="values-container">
         <!-- Card 1 -->
@@ -477,10 +490,14 @@
           <div class="value-icon">
             <img
               src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png"
+              alt="Integrity"
             />
           </div>
-          <h3>Integrity</h3>
-          <p>
+          <h3 data-en="Integrity" data-ar="النزاهة">Integrity</h3>
+          <p
+            data-en="We operate with complete transparency and honesty in all our dealings"
+            data-ar="نعمل بشفافية وأمانة كاملة في جميع تعاملاتنا"
+          >
             We operate with complete transparency and honesty in all our
             dealings
           </p>
@@ -489,84 +506,59 @@
         <!-- Card 2 -->
         <div class="value-card">
           <div class="value-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/992/992651.png"
+              alt="Excellence"
+            />
           </div>
-          <h3>Excellence</h3>
-          <p>We strive for the highest quality in every service we provide</p>
+          <h3 data-en="Excellence" data-ar="التميز">Excellence</h3>
+          <p
+            data-en="We strive for the highest quality in every service we provide"
+            data-ar="نسعى لتحقيق أعلى مستويات الجودة في كل خدمة نقدمها"
+          >
+            We strive for the highest quality in every service we provide
+          </p>
         </div>
 
         <!-- Card 3 -->
         <div class="value-card">
           <div class="value-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/833/833472.png"
+              alt="Client Focus"
+            />
           </div>
-          <h3>Client-Focused</h3>
-          <p>Your success and satisfaction are our top priorities</p>
+          <h3 data-en="Client-Focused" data-ar="التركيز على العميل">
+            Client-Focused
+          </h3>
+          <p
+            data-en="Your success and satisfaction are our top priorities"
+            data-ar="نجاحك ورضاك هما أولويتنا القصوى"
+          >
+            Your success and satisfaction are our top priorities
+          </p>
         </div>
 
         <!-- Card 4 -->
         <div class="value-card">
           <div class="value-icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" />
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/992/992700.png"
+              alt="Efficiency"
+            />
           </div>
-          <h3>Efficiency</h3>
-          <p>
+          <h3 data-en="Efficiency" data-ar="الكفاءة">Efficiency</h3>
+          <p
+            data-en="We deliver fast and reliable solutions without compromising quality"
+            data-ar="نقدم حلولاً سريعة وموثوقة دون المساس بالجودة"
+          >
             We deliver fast and reliable solutions without compromising quality
           </p>
         </div>
       </div>
     </section>
-    <!-- Order track -->
-    <section class="track-record">
-      <h2>Our Track Record</h2>
 
-      <div class="track-grid">
-        <div class="track-item">
-          <span class="number">500+</span>
-          <p>Happy Clients</p>
-        </div>
-
-        <div class="track-item">
-          <span class="number">10+</span>
-          <p>Years Experience</p>
-        </div>
-
-        <div class="track-item">
-          <span class="number">1000+</span>
-          <p>Services Completed</p>
-        </div>
-
-        <div class="track-item">
-          <span class="number">100%</span>
-          <p>Client Satisfaction</p>
-        </div>
-      </div>
-    </section>
-    <!-- Why Choose Us Section -->
-    <section class="why-choose">
-      <h2>Why Choose Us</h2>
-
-      <p class="why-desc">
-        Taqwa Group of Companies brings together a team of experienced
-        professionals who understand the complexities of UAE business
-        regulations and procedures. We handle all your PRO services with
-        expertise and care, allowing you to focus on growing your business.
-      </p>
-
-      <div class="why-grid">
-        <div class="why-item">Licensed and certified professionals</div>
-        <div class="why-item">Deep knowledge of UAE regulations</div>
-
-        <div class="why-item">Bilingual support (English & Arabic)</div>
-        <div class="why-item">Fast processing times</div>
-
-        <div class="why-item">Competitive pricing</div>
-        <div class="why-item">24/7 customer support</div>
-      </div>
-
-      <a href="#" class="why-btn"> <span>📞</span> Get in Touch </a>
-    </section>
-    <!-- footer code -->
+    <!-- Footer same -->
     <footer class="atg-footer">
       <div class="atg-footer-container">
         <!-- Company Info -->
@@ -576,48 +568,99 @@
               <img src="assets/Taqwa fav icon.png" alt="Taqwa Group Logo" />
             </span>
             <div class="atg-brand-text">
-              <h3>Taqwa Group</h3>
-              <small>Since 2025</small>
+              <h3 data-en="Taqwa Group" data-ar="مجموعة التقوى">Taqwa Group</h3>
+              <small data-en="Since 2025" data-ar="منذ 2025">
+                Since 2025
+              </small>
             </div>
           </div>
 
-          <p class="atg-desc">
+          <p
+            class="atg-desc"
+            data-en="Providing comprehensive PRO services, business setup, visa services, and more across the UAE. Your success is our priority."
+            data-ar="نقدم خدمات العلاقات العامة، تأسيس الأعمال، خدمات التأشيرات والمزيد في جميع أنحاء دولة الإمارات. نجاحك هو أولويتنا."
+          >
             Providing comprehensive PRO services, business setup, visa services,
             <br />
             and more across the UAE. Your success is our priority.
           </p>
 
-          <a href="mailto:taqwagroupservices01@gmail.com" class="atg-email">
+          <a
+            href="mailto:taqwagroupservices01@gmail.com"
+            class="atg-email"
+            data-en="taqwagroupservices01@gmail.com"
+            data-ar="taqwagroupservices01@gmail.com"
+          >
             taqwagroupservices01@gmail.com
           </a>
         </div>
 
         <!-- Quick Links -->
         <div class="atg-footer-col">
-          <h4>Quick Links</h4>
+          <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            </li>
+            <li>
+              <a href="services.html" data-en="Our Services" data-ar="خدماتنا">
+                Our Services
+              </a>
+            </li>
+            <li>
+              <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+            </li>
+            <li>
+              <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div class="atg-footer-col">
-          <h4>Contact Us</h4>
-          <p><i class="fa-solid fa-phone"></i> 0566492601</p>
-          <p><i class="Name"></i> Muhammad Zeeshan</p>
-          <p><i class="fa-solid fa-phone"></i> 0569786608</p>
-          <p><i class="name"></i> Sheikh shahbaz</p>
+          <h4 data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h4>
 
-          <!-- <p><i class="fa-solid fa-location-dot"></i> United Arab Emirates</p> -->
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <span data-en="0566492601" data-ar="0566492601">0566492601</span>
+          </p>
+
+          <p data-en="Muhammad Zeeshan" data-ar="محمد زيشان">
+            Muhammad Zeeshan
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <span data-en="0569786608" data-ar="0569786608">0569786608</span>
+          </p>
+
+          <p data-en="Sheikh Shahbaz" data-ar="الشيخ شهباز">Sheikh shahbaz</p>
         </div>
       </div>
 
-      <div class="atg-footer-bottom">
+      <div
+        class="atg-footer-bottom"
+        data-en="© 2025 Al Taqwa Group of Companies. All rights reserved."
+        data-ar="© 2025 مجموعة التقوى. جميع الحقوق محفوظة."
+      >
         © 2025 Al Taqwa Group of Companies. All rights reserved.
       </div>
     </footer>
+
+    <script>
+      const switcher = document.getElementById("languageSwitcher");
+
+      switcher.addEventListener("change", function () {
+        const lang = this.value;
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          el.textContent = el.getAttribute("data-" + lang);
+        });
+
+        document.body.dir = lang === "ar" ? "rtl" : "ltr";
+      });
+    </script>
   </body>
 </html>
