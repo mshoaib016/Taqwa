@@ -10,6 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="shortcut icon"
+      href="assets/Taqwa fav icon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       * {
@@ -357,6 +362,136 @@
           font-size: 28px;
         }
       }
+
+      .track-record {
+        background: #0f172a;
+        padding: 70px 20px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .track-record h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 50px;
+      }
+
+      .track-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .track-item .number {
+        display: block;
+        font-size: 48px;
+        font-weight: 800;
+        color: #d2b16f;
+        margin-bottom: 10px;
+      }
+
+      .track-item p {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .track-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .track-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .track-record h2 {
+          font-size: 28px;
+        }
+      }
+
+      .why-choose {
+        padding: 80px 20px;
+        text-align: center;
+        background: #ffffff;
+      }
+
+      .why-choose h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #0f172a;
+      }
+
+      .why-desc {
+        max-width: 820px;
+        margin: 0 auto 50px;
+        font-size: 15px;
+        line-height: 1.8;
+        color: #475569;
+      }
+
+      .why-grid {
+        max-width: 1000px;
+        margin: 0 auto 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 40px;
+      }
+
+      .why-item {
+        background: #f8fafc;
+        padding: 14px 20px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: #0f172a;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .why-item .dot {
+        width: 8px;
+        height: 8px;
+        background: #f59e0b;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .why-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #0f172a;
+        color: #ffffff;
+        padding: 14px 32px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 10px 20px #d2b16f;
+        transition: 0.3s ease;
+      }
+
+      .why-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .why-choose h2 {
+          font-size: 28px;
+        }
+      }
     </style>
   </head>
 
@@ -556,6 +691,77 @@
           </p>
         </div>
       </div>
+    </section>
+
+    <section class="track-record">
+      <h2>Our Track Record</h2>
+
+      <div class="track-grid">
+        <div class="track-item">
+          <span class="number">500+</span>
+          <p>Happy Clients</p>
+        </div>
+
+        <div class="track-item">
+          <span class="number">10+</span>
+          <p>Years Experience</p>
+        </div>
+
+        <div class="track-item">
+          <span class="number">1000+</span>
+          <p>Services Completed</p>
+        </div>
+
+        <div class="track-item">
+          <span class="number">100%</span>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose">
+      <h2>Why Choose Us</h2>
+
+      <p class="why-desc">
+        Taqwa Group of Companies brings together a team of experienced
+        professionals who understand the complexities of UAE business
+        regulations and procedures. We handle all your PRO services with
+        expertise and care, allowing you to focus on growing your business.
+      </p>
+
+      <div class="why-grid">
+        <div class="why-item">
+          <span class="dot"></span>
+          Licensed and certified professionals
+        </div>
+
+        <div class="why-item">
+          <span class="dot"></span>
+          Deep knowledge of UAE regulations
+        </div>
+
+        <div class="why-item">
+          <span class="dot"></span>
+          Bilingual support (English & Arabic)
+        </div>
+
+        <div class="why-item">
+          <span class="dot"></span>
+          Fast processing times
+        </div>
+
+        <div class="why-item">
+          <span class="dot"></span>
+          Competitive pricing
+        </div>
+
+        <div class="why-item">
+          <span class="dot"></span>
+          24/7 customer support
+        </div>
+      </div>
+
+      <a href="0566492601" class="why-btn"> <span>📞</span> Get in Touch </a>
     </section>
 
     <!-- Footer same -->
