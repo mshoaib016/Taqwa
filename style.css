@@ -466,7 +466,7 @@ html {
 /* Responsive */
 @media (max-width: 768px) {
   /* Typography */
-  .hero-content h1 {
+  .hero-content h2 {
     font-size: 32px; /* 48 mobile ke liye zyada hai */
     line-height: 1.3;
   }
@@ -1472,7 +1472,7 @@ footer {
     padding: 20px 16px;
   }
 
-  .hero-content h1 {
+  .hero-content h2 {
     font-size: 30px;
     line-height: 1.3;
   }
