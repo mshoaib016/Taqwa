@@ -482,6 +482,40 @@
         transform: translateY(-2px);
       }
 
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background: #0f172a;
+        padding: 90px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transition: 0.3s ease;
+        z-index: 2000;
+      }
+
+      .mobile-menu.active {
+        right: 0;
+      }
+
+      .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        z-index: 1500;
+      }
+
+      .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
       /* Responsive */
       @media (max-width: 768px) {
         .why-grid {
@@ -940,19 +974,17 @@
         const mobileMenu = document.getElementById("mobileMenu");
         const overlay = document.getElementById("menuOverlay");
 
-        if (hamburger && mobileMenu && overlay) {
-          hamburger.addEventListener("click", () => {
-            mobileMenu.classList.add("show");
-            overlay.classList.add("show");
-            topBar.classList.add("hide"); // hide yellow bar
-          });
+        hamburger.addEventListener("click", () => {
+          mobileMenu.classList.toggle("active");
+          overlay.classList.toggle("active");
+          topBar.classList.add("hide");
+        });
 
-          overlay.addEventListener("click", () => {
-            mobileMenu.classList.remove("show");
-            overlay.classList.remove("show");
-            topBar.classList.remove("hide"); // show yellow bar
-          });
-        }
+        overlay.addEventListener("click", () => {
+          mobileMenu.classList.remove("active");
+          overlay.classList.remove("active");
+          topBar.classList.remove("hide");
+        });
       });
 
       const switcher = document.getElementById("languageSwitcher");
