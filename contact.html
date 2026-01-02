@@ -217,207 +217,337 @@
           grid-template-columns: 1fr;
         }
       }
-      
     </style>
   </head>
   <body>
-    <!-- WhatsApp -->
-    <a href="https://wa.me/971566492601" target="_blank" class="whatsapp-icon">
-      <img src="assets/whatsApp.png" alt="WhatsApp" />
-    </a>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Contact Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ===== HEADER ===== -->
-    <header class="main-header">
-      <!-- Logo -->
-      <div class="logo-area">
-        <img
-          src="assets/Taqwa header logo.png"
-          alt="Taqwa Group Logo"
-          class="logo-img"
+        <!-- Font Awesome -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
-        <div class="logo-text"></div>
-      </div>
+      </head>
 
-      <!-- Navigation (Desktop) -->
-      <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Our Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+      <body>
+        <!-- WhatsApp -->
+        <a
+          href="https://wa.me/971566492601"
+          target="_blank"
+          class="whatsapp-icon"
+        >
+          <img src="assets/whatsApp.png" alt="WhatsApp" />
+        </a>
 
-      <!-- Right Side -->
-      <div class="header-right">
-        <div class="header-btn">
-          <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا"
-            >Call Us</a
+        <!-- ===== HEADER ===== -->
+        <header class="main-header">
+          <div class="logo-area">
+            <img
+              src="assets/Taqwa header logo.png"
+              alt="Taqwa Group Logo"
+              class="logo-img"
+            />
+          </div>
+
+          <nav class="nav-menu">
+            <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="services.html" data-en="Our Services" data-ar="خدماتنا"
+              >Our Services</a
+            >
+            <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+            <a href="contact.html" data-en="Contact" data-ar="اتصل بنا"
+              >Contact</a
+            >
+          </nav>
+
+          <div class="header-right">
+            <div class="header-btn">
+              <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا"
+                >Call Us</a
+              >
+            </div>
+
+            <div class="hamburger" id="hamburger">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </header>
+
+        <!-- ===== MOBILE MENU ===== -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+          <a href="services.html" data-en="Services" data-ar="الخدمات"
+            >Services</a
+          >
+          <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+          <a href="contact.html" data-en="Contact" data-ar="اتصل بنا"
+            >Contact</a
           >
         </div>
 
-        <!-- Hamburger -->
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </header>
+        <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- ===== MOBILE MENU ===== -->
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
+        <!-- ===== TOP BAR ===== -->
+        <div class="top-bar">
+          <div class="top-bar-content">
+            <div class="phone">📞 <a href="tel:0566492601">0566492601</a></div>
 
-    <div class="menu-overlay" id="menuOverlay"></div>
-
-    <!-- ===== TOP BAR ===== -->
-    <div class="top-bar">
-      <div class="top-bar-content">
-        <div class="phone">📞 <a href="tel:0566492601">0566492601</a></div>
-
-        <div class="lang">
-          <select id="languageSwitcher">
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <!-- ===== ABOUT HERO ===== -->
-    <section class="about-hero">
-      <div class="about-hero-content">
-        <h1>Contact Us</h1>
-        <p>Get in touch with us for any inquiries or assistance</p>
-      </div>
-    </section>
-
-    <section class="contact-section">
-      <div class="contact-container">
-        <!-- LEFT FORM -->
-        <div class="contact-form">
-          <h3>Send us a Message</h3>
-
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name" />
-
-          <label>Email Address</label>
-          <input type="email" placeholder="Email Address" />
-
-          <label>Phone Number</label>
-          <input type="text" placeholder="+971 XXX XXX XXX" />
-
-          <label>Service Interested In</label>
-          <input type="text" placeholder="e.g. Business Setup" />
-
-          <label>Your Message</label>
-          <textarea placeholder="Your Message"></textarea>
-
-          <button class="send-btn">✈ Send Message</button>
+            <div class="lang">
+              <select id="languageSwitcher">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        <!-- RIGHT SIDE -->
-        <div class="contact-right">
-          <!-- INFO BOX -->
-          <div class="info-box">
-            <h3>Contact Information</h3>
+        <!-- ===== ABOUT HERO ===== -->
+        <section class="about-hero">
+          <div class="about-hero-content">
+            <h1 data-en="Contact Us" data-ar="اتصل بنا">Contact</h1>
+            <p
+              data-en="Get in touch with us for any inquiries or assistance"
+              data-ar="تواصل معنا لأي استفسار أو مساعدة"
+            >
+              Get in touch with us for any inquiries or assistance
+            </p>
+          </div>
+        </section>
 
-            <div class="info-item">
-              <span class="icon phone">📞</span>
-              <div>
-                <strong>Phone</strong>
-                <p>+971 555 443 007</p>
-              </div>
+        <!-- ===== CONTACT SECTION ===== -->
+        <section class="contact-section">
+          <div class="contact-container">
+            <!-- LEFT FORM -->
+            <div class="contact-form">
+              <h3 data-en="Send us a Message" data-ar="أرسل لنا رسالة">
+                Send us a Message
+              </h3>
+
+              <label data-en="Full Name" data-ar="الاسم الكامل"
+                >Full Name</label
+              >
+              <input type="text" placeholder="Full Name" />
+
+              <label data-en="Email Address" data-ar="البريد الإلكتروني"
+                >Email Address</label
+              >
+              <input type="email" placeholder="Email Address" />
+
+              <label data-en="Phone Number" data-ar="رقم الهاتف"
+                >Phone Number</label
+              >
+              <input type="text" placeholder="+971 XXX XXX XXX" />
+
+              <label data-en="Service Interested In" data-ar="الخدمة المطلوبة"
+                >Service Interested In</label
+              >
+              <input type="text" placeholder="e.g. Business Setup" />
+
+              <label data-en="Your Message" data-ar="رسالتك"
+                >Your Message</label
+              >
+              <textarea placeholder="Your Message"></textarea>
+
+              <button
+                class="send-btn"
+                data-en="Send Message"
+                data-ar="إرسال الرسالة"
+              >
+                Send Message
+              </button>
             </div>
 
-            <div class="info-item">
-              <span class="icon email">✉</span>
-              <div>
-                <strong>Email</strong>
-                <p>Taqwagroup.services@gmail.com</p>
-              </div>
-            </div>
+            <!-- RIGHT SIDE -->
+            <div class="contact-right">
+              <!-- INFO BOX -->
+              <div class="info-box">
+                <h3 data-en="Contact Information" data-ar="معلومات التواصل">
+                  Contact Information
+                </h3>
 
-            <!-- <div class="info-item">
-              <span class="icon location">📍</span>
-              <div>
-                <strong>Location</strong>
-                <p>United Arab Emirates</p>
-              </div>
-            </div> -->
+                <div class="info-item">
+                  <span class="icon phone">📞</span>
+                  <div>
+                    <strong data-en="Phone" data-ar="الهاتف">Phone</strong>
+                    <p>+971 0566492601</p>
+                  </div>
+                </div>
 
-            <div class="info-item">
-              <span class="icon time">⏰</span>
-              <div>
-                <strong>Business Hours</strong>
-                <p>Sunday - Thursday: 9:00 AM - 6:00 PM</p>
+                <div class="info-item">
+                  <span class="icon email">✉</span>
+                  <div>
+                    <strong data-en="Email" data-ar="البريد الإلكتروني"
+                      >Email</strong
+                    >
+                    <p>taqwagroupservices01@gmail.com</p>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <span class="icon time">⏰</span>
+                  <div>
+                    <strong data-en="Business Hours" data-ar="ساعات العمل"
+                      >Business Hours</strong
+                    >
+                    <p
+                      data-en="Sunday - Thursday: 9:00 AM - 6:00 PM"
+                      data-ar="الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً"
+                    >
+                      Sunday - Thursday: 9:00 AM - 6:00 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- QUICK CONTACT -->
+              <div class="quick-contact">
+                <h3 data-en="Quick Contact" data-ar="تواصل سريع">
+                  Quick Contact
+                </h3>
+                <a
+                  href="tel:+971555443007"
+                  class="call-btn"
+                  data-en="Call Now"
+                  data-ar="اتصل الآن"
+                  >📞 Call Now</a
+                >
+                <a
+                  href="https://wa.me/971566492601"
+                  class="whatsapp-btn"
+                  data-en="WhatsApp Us"
+                  data-ar="واتساب"
+                  >🟢 WhatsApp Us</a
+                >
               </div>
             </div>
           </div>
+        </section>
 
-          <!-- QUICK CONTACT -->
-          <div class="quick-contact">
-            <h3>Quick Contact</h3>
-            <a href="tel:+971555443007" class="call-btn">📞 Call Now</a>
-            <a href="#" class="whatsapp-btn">🟢 WhatsApp Us</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- ===== FOOTER ===== -->
+        <footer class="atg-footer">
+          <div class="atg-footer-container">
+            <!-- Company Info -->
+            <div class="atg-footer-col">
+              <div class="atg-brand">
+                <span class="atg-logo">
+                  <img src="assets/Taqwa fav icon.png" alt="Taqwa Group Logo" />
+                </span>
+                <div class="atg-brand-text">
+                  <h3 data-en="Taqwa Group" data-ar="مجموعة التقوى">
+                    Taqwa Group
+                  </h3>
+                  <small data-en="Since 2025" data-ar="منذ 2025">
+                    Since 2025
+                  </small>
+                </div>
+              </div>
 
-    <footer class="atg-footer">
-      <div class="atg-footer-container">
-        <!-- Company Info -->
-        <div class="atg-footer-col">
-          <div class="atg-brand">
-            <span class="atg-logo">
-              <img src="assets/Taqwa fav icon.png" alt="Taqwa Group Logo" />
-            </span>
-            <div class="atg-brand-text">
-              <h3>Taqwa Group</h3>
-              <small>Since 2025</small>
+              <p
+                class="atg-desc"
+                data-en="Providing comprehensive PRO services, business setup, visa services, and more across the UAE. Your success is our priority."
+                data-ar="نقدم خدمات العلاقات العامة، تأسيس الأعمال، خدمات التأشيرات والمزيد في جميع أنحاء دولة الإمارات. نجاحك هو أولويتنا."
+              >
+                Providing comprehensive PRO services, business setup, visa
+                services,
+                <br />
+                and more across the UAE. Your success is our priority.
+              </p>
+
+              <a
+                href="mailto:taqwagroupservices01@gmail.com"
+                class="atg-email"
+                data-en="taqwagroupservices01@gmail.com"
+                data-ar="taqwagroupservices01@gmail.com"
+              >
+                taqwagroupservices01@gmail.com
+              </a>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="atg-footer-col">
+              <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+              <ul>
+                <li>
+                  <a href="index.html" data-en="Home" data-ar="الرئيسية"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="services.html"
+                    data-en="Our Services"
+                    data-ar="خدماتنا"
+                  >
+                    Our Services
+                  </a>
+                </li>
+                <li>
+                  <a href="about.html" data-en="About" data-ar="من نحن"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="atg-footer-col">
+              <h4 data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h4>
+
+              <p>
+                <i class="fa-solid fa-phone"></i>
+                <span data-en="0566492601" data-ar="0566492601"
+                  >0566492601</span
+                >
+              </p>
+
+              <p data-en="Muhammad Zeeshan" data-ar="محمد زيشان">
+                Muhammad Zeeshan
+              </p>
+
+              <p>
+                <i class="fa-solid fa-phone"></i>
+                <span data-en="0569786608" data-ar="0569786608"
+                  >0569786608</span
+                >
+              </p>
+
+              <p data-en="Sheikh Shahbaz" data-ar="الشيخ شهباز">
+                Sheikh shahbaz
+              </p>
             </div>
           </div>
 
-          <p class="atg-desc">
-            Providing comprehensive PRO services, business setup, visa services,
-            <br />
-            and more across the UAE. Your success is our priority.
-          </p>
+          <div
+            class="atg-footer-bottom"
+            data-en="© 2025 Al Taqwa Group of Companies. All rights reserved."
+            data-ar="© 2025 مجموعة التقوى. جميع الحقوق محفوظة."
+          >
+            © 2025 Al Taqwa Group of Companies. All rights reserved.
+          </div>
+        </footer>
 
-          <a href="mailto:Taqwagroup.services@gmail.com" class="atg-email">
-            Taqwagroup.services@gmail.com
-          </a>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="atg-footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="atg-footer-col">
-          <h4>Contact Us</h4>
-          <p><i class="fa-solid fa-phone"></i> 0566492601</p>
-          <p><i class="Name"></i> Muhammad Zeeshan</p>
-          <p><i class="fa-solid fa-phone"></i> 0569786608</p>
-          <p><i class="name"></i> Sheikh shahbaz</p>
-
-          <!-- <p><i class="fa-solid fa-location-dot"></i> United Arab Emirates</p> -->
-        </div>
-      </div>
-
-      <div class="atg-footer-bottom">
-        © 2025 Al Taqwa Group of Companies. All rights reserved.
-      </div>
-    </footer>
+        <!-- ===== LANGUAGE SCRIPT ===== -->
+        <script>
+          const switcher = document.getElementById("languageSwitcher");
+          switcher.addEventListener("change", function () {
+            const lang = this.value;
+            document.querySelectorAll("[data-en]").forEach((el) => {
+              el.innerText = el.getAttribute("data-" + lang);
+            });
+            document.body.dir = lang === "ar" ? "rtl" : "ltr";
+          });
+        </script>
+      </body>
+    </html>
   </body>
 </html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Taqwa Group</title>
+    <title>Taqwa</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
@@ -18,7 +18,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
+    <link
+      rel="shortcut icon"
+      href="assets/Taqwa fav icon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -37,18 +41,20 @@
 
       <!-- Navigation (Desktop) -->
       <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Our Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+        <a href="services.html" data-en="Our Services" data-ar="خدماتنا"
+          >Our Services</a
+        >
+        <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+        <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
       </nav>
 
       <!-- Right Side -->
       <div class="header-right">
         <div class="header-btn">
-          <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا"
-            >Call Us</a
-          >
+          <a href="tel:0566492601" data-en="Call Us" data-ar="اتصل بنا">
+            Call Us
+          </a>
         </div>
 
         <!-- Hamburger -->
@@ -62,10 +68,10 @@
 
     <!-- ===== MOBILE MENU ===== -->
     <div class="mobile-menu" id="mobileMenu">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+      <a href="services.html" data-en="Services" data-ar="الخدمات">Services</a>
+      <a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a>
+      <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a>
     </div>
 
     <div class="menu-overlay" id="menuOverlay"></div>
@@ -73,12 +79,21 @@
     <!-- ===== TOP BAR ===== -->
     <div class="top-bar">
       <div class="top-bar-content">
-        <div class="phone">📞 <a href="tel:0566492601">0566492601</a></div>
+        <div class="phone">
+          📞
+          <a href="tel:0566492601" data-en="0566492601" data-ar="0566492601">
+            0566492601
+          </a>
+        </div>
 
         <div class="lang">
           <select id="languageSwitcher">
-            <option value="en">English</option>
-            <option value="ar">العربية</option>
+            <option value="en" data-en="English" data-ar="الإنجليزية">
+              English
+            </option>
+            <option value="ar" data-en="Arabic" data-ar="العربية">
+              العربية
+            </option>
           </select>
         </div>
       </div>
@@ -88,43 +103,86 @@
     <section id="home" class="hero-section">
       <div class="hero-overlay">
         <div class="hero-content">
-          <span class="trusted-label"> <small>AE</small>Trusted in UAE</span>
+          <span
+            class="trusted-label"
+            data-en="Trusted in UAE"
+            data-ar="موثوق في الإمارات"
+          >
+            <small data-en="AE" data-ar="الإمارات">AE</small>
+            Trusted in UAE
+          </span>
 
-          <h1>
+          <h1
+            data-en="Your Trusted Partner for PRO Services in UAE"
+            data-ar="شريكك الموثوق لخدمات العلاقات العامة في الإمارات"
+          >
             Your Trusted Partner for <br />
-            <span>PRO Services in UAE</span>
+            <span
+              data-en="PRO Services in UAE"
+              data-ar="خدمات العلاقات العامة في الإمارات"
+            >
+              PRO Services in UAE
+            </span>
           </h1>
 
-          <p>
+          <p
+            data-en="Complete business solutions from setup to operations. We handle all your government-related services."
+            data-ar="حلول أعمال متكاملة من التأسيس إلى التشغيل. نحن ندير جميع خدماتك الحكومية."
+          >
             Complete business solutions from setup to operations.<br />
             We handle all your government-related services.
           </p>
 
           <div class="hero-buttons">
-            <a href="tel:0566492601" class="btn call-btn">📞 Call Now</a>
-            <a href="#services" class="btn service-btn">Our Services →</a>
+            <a
+              href="tel:0566492601"
+              class="btn call-btn"
+              data-en="📞 Call Now"
+              data-ar="📞 اتصل الآن"
+            >
+              📞 Call Now
+            </a>
+
+            <a
+              href="#services"
+              class="btn service-btn"
+              data-en="Our Services →"
+              data-ar="خدماتنا ←"
+            >
+              Our Services →
+            </a>
           </div>
 
           <div class="hero-stats">
             <div class="stat">
               <h2>500+</h2>
-              <p>Happy Clients</p>
+              <p data-en="Happy Clients" data-ar="عملاء سعداء">Happy Clients</p>
             </div>
+
             <div class="stat">
               <h2>10+</h2>
-              <p>Years Experience</p>
+              <p data-en="Years Experience" data-ar="سنوات الخبرة">
+                Years Experience
+              </p>
             </div>
+
             <div class="stat">
               <h2>24/7</h2>
-              <p>Support</p>
+              <p data-en="Support" data-ar="الدعم">Support</p>
             </div>
           </div>
 
           <div class="visitor-card">
             <!-- Total Visitors -->
             <div class="visitors">
-              <span class="label">
-                <span class="eye-icon"> <i class="fa-solid fa-eye"></i> </span>
+              <span
+                class="label"
+                data-en="Total Visitors"
+                data-ar="إجمالي الزوار"
+              >
+                <span class="eye-icon">
+                  <i class="fa-solid fa-eye"></i>
+                </span>
                 Total Visitors
               </span>
               <h3 id="totalVisitors">11,031</h3>
@@ -135,8 +193,13 @@
 
             <!-- Online Now -->
             <div class="online">
-              <span class="label online-label">
-                <span class="dot"></span> Online Now
+              <span
+                class="label online-label"
+                data-en="Online Now"
+                data-ar="متصل الآن"
+              >
+                <span class="dot"></span>
+                Online Now
               </span>
               <h3 id="onlineNow">33</h3>
             </div>
@@ -146,13 +209,26 @@
     </section>
 
     <!-- WhatsApp -->
-    <a href="https://wa.me/971566492601" target="_blank" class="whatsapp-icon">
+    <a
+      href="https://wa.me/971566492601"
+      target="_blank"
+      class="whatsapp-icon"
+      data-en="WhatsApp"
+      data-ar="واتساب"
+    >
       <img src="assets/whatsApp.png" alt="WhatsApp" />
     </a>
 
     <section id="services" class="services-section">
-      <h2>Our Premium Services</h2>
-      <p class="subtitle">
+      <h2 data-en="Our Premium Services" data-ar="خدماتنا المتميزة">
+        Our Premium Services
+      </h2>
+
+      <p
+        class="subtitle"
+        data-en="Comprehensive solutions for all your business needs in the UAE"
+        data-ar="حلول شاملة لجميع احتياجات عملك في دولة الإمارات"
+      >
         Comprehensive solutions for all your business needs in the UAE
       </p>
 
@@ -160,220 +236,419 @@
         <!-- Card 1 -->
         <div class="service-card">
           <div class="icon">🏢</div>
-          <h3>Air Conditioning</h3>
-          <p>Reliable cooling solutions for comfortable indoor environments.</p>
+          <h3 data-en="Air Conditioning" data-ar="تكييف الهواء">
+            Air Conditioning
+          </h3>
+          <p
+            data-en="Reliable cooling solutions for comfortable indoor environments."
+            data-ar="حلول تبريد موثوقة لبيئات داخلية مريحة."
+          >
+            Reliable cooling solutions for comfortable indoor environments.
+          </p>
           <ul>
-            <li>AC Installation</li>
-            <li>Cooling Repair</li>
-            <li>System Maintenance</li>
-            <li>Energy Efficiency</li>
+            <li data-en="AC Installation" data-ar="تركيب المكيفات">
+              AC Installation
+            </li>
+            <li data-en="Cooling Repair" data-ar="إصلاح التبريد">
+              Cooling Repair
+            </li>
+            <li data-en="System Maintenance" data-ar="صيانة الأنظمة">
+              System Maintenance
+            </li>
+            <li data-en="Energy Efficiency" data-ar="كفاءة الطاقة">
+              Energy Efficiency
+            </li>
           </ul>
         </div>
 
         <!-- Card 2 -->
         <div class="service-card">
           <div class="icon">📄</div>
-          <h3>Ventilation Systems</h3>
-          <p>Reliable cooling solutions for comfortable indoor environments.</p>
+          <h3 data-en="Ventilation Systems" data-ar="أنظمة التهوية">
+            Ventilation Systems
+          </h3>
+          <p
+            data-en="Reliable cooling solutions for comfortable indoor environments."
+            data-ar="حلول موثوقة لراحة الهواء الداخلي."
+          >
+            Reliable cooling solutions for comfortable indoor environments.
+          </p>
           <ul>
-            <li>Air Circulation</li>
-            <li>Exhaust Setup</li>
-            <li>Duct Installation</li>
-            <li>Safety Compliance</li>
+            <li data-en="Air Circulation" data-ar="تدوير الهواء">
+              Air Circulation
+            </li>
+            <li data-en="Exhaust Setup" data-ar="تركيب العادم">
+              Exhaust Setup
+            </li>
+            <li data-en="Duct Installation" data-ar="تركيب القنوات">
+              Duct Installation
+            </li>
+            <li data-en="Safety Compliance" data-ar="الالتزام بالسلامة">
+              Safety Compliance
+            </li>
           </ul>
         </div>
 
         <!-- Card 3 -->
         <div class="service-card">
           <div class="icon">🛡️</div>
-          <h3>Air Filtration</h3>
-          <p>Advanced filtration for cleaner and healthier spaces.</p>
+          <h3 data-en="Air Filtration" data-ar="تنقية الهواء">
+            Air Filtration
+          </h3>
+          <p
+            data-en="Advanced filtration for cleaner and healthier spaces."
+            data-ar="أنظمة تنقية متقدمة لمساحات أنظف وأكثر صحة."
+          >
+            Advanced filtration for cleaner and healthier spaces.
+          </p>
           <ul>
-            <li>Clean Air</li>
-            <li>Dust Removal</li>
-            <li>Filter Replacement</li>
-            <li>Health Safety</li>
+            <li data-en="Clean Air" data-ar="هواء نقي">Clean Air</li>
+            <li data-en="Dust Removal" data-ar="إزالة الغبار">Dust Removal</li>
+            <li data-en="Filter Replacement" data-ar="استبدال الفلاتر">
+              Filter Replacement
+            </li>
+            <li data-en="Health Safety" data-ar="السلامة الصحية">
+              Health Safety
+            </li>
           </ul>
         </div>
 
         <!-- Card 4 -->
         <div class="service-card">
           <div class="icon">👥</div>
-          <h3>Cleaning Services</h3>
-          <p>Advanced filtration for cleaner and healthier spaces.</p>
+          <h3 data-en="Cleaning Services" data-ar="خدمات التنظيف">
+            Cleaning Services
+          </h3>
+          <p
+            data-en="Advanced filtration for cleaner and healthier spaces."
+            data-ar="خدمات تنظيف احترافية لبيئات صحية."
+          >
+            Advanced filtration for cleaner and healthier spaces.
+          </p>
           <ul>
-            <li>Skilled Workers</li>
-            <li>Office Staff</li>
-            <li>Temporary Labor</li>
-            <li>Reliable Support</li>
+            <li data-en="Skilled Workers" data-ar="عمالة ماهرة">
+              Skilled Workers
+            </li>
+            <li data-en="Office Staff" data-ar="طاقم مكتبي">Office Staff</li>
+            <li data-en="Temporary Labor" data-ar="عمالة مؤقتة">
+              Temporary Labor
+            </li>
+            <li data-en="Reliable Support" data-ar="دعم موثوق">
+              Reliable Support
+            </li>
           </ul>
         </div>
 
         <!-- Card 5 -->
         <div class="service-card">
           <div class="icon">🏠</div>
-          <h3>Carpentry Works</h3>
-          <p>Professional cleaning for hygienic commercial environments.</p>
+          <h3 data-en="Carpentry Works" data-ar="أعمال النجارة">
+            Carpentry Works
+          </h3>
+          <p
+            data-en="Professional cleaning for hygienic commercial environments."
+            data-ar="أعمال نجارة احترافية للمساحات التجارية."
+          >
+            Professional cleaning for hygienic commercial environments.
+          </p>
           <ul>
-            <li>Wood Installation</li>
-            <li>Custom Furniture</li>
-            <li>Repair Services</li>
-            <li>Finishing Work</li>
+            <li data-en="Wood Installation" data-ar="تركيب الخشب">
+              Wood Installation
+            </li>
+            <li data-en="Custom Furniture" data-ar="أثاث مخصص">
+              Custom Furniture
+            </li>
+            <li data-en="Repair Services" data-ar="خدمات الإصلاح">
+              Repair Services
+            </li>
+            <li data-en="Finishing Work" data-ar="أعمال التشطيب">
+              Finishing Work
+            </li>
           </ul>
         </div>
 
         <!-- Card 6 -->
         <div class="service-card">
           <div class="icon">📊</div>
-          <h3>Electrical Maintenance</h3>
-          <p>Safe electrical services ensuring reliable power systems.</p>
+          <h3 data-en="Electrical Maintenance" data-ar="الصيانة الكهربائية">
+            Electrical Maintenance
+          </h3>
+          <p
+            data-en="Safe electrical services ensuring reliable power systems."
+            data-ar="خدمات كهربائية آمنة لضمان أنظمة طاقة موثوقة."
+          >
+            Safe electrical services ensuring reliable power systems.
+          </p>
           <ul>
-            <li>Wiring Inspection</li>
-            <li>Power Repairs</li>
-            <li>Lighting Fixes</li>
-            <li>Safety Compliance</li>
+            <li data-en="Wiring Inspection" data-ar="فحص الأسلاك">
+              Wiring Inspection
+            </li>
+            <li data-en="Power Repairs" data-ar="إصلاح الطاقة">
+              Power Repairs
+            </li>
+            <li data-en="Lighting Fixes" data-ar="إصلاح الإضاءة">
+              Lighting Fixes
+            </li>
+            <li data-en="Safety Compliance" data-ar="الالتزام بالسلامة">
+              Safety Compliance
+            </li>
           </ul>
         </div>
 
         <!-- Card 7 -->
         <div class="service-card">
           <div class="icon">💻</div>
-          <h3>Plumbing Installation</h3>
-          <p>Safe electrical services ensuring reliable power systems.</p>
+          <h3 data-en="Plumbing Installation" data-ar="تركيب السباكة">
+            Plumbing Installation
+          </h3>
+          <p
+            data-en="Safe electrical services ensuring reliable power systems."
+            data-ar="حلول سباكة فعالة لتدفق المياه بسلاسة."
+          >
+            Safe electrical services ensuring reliable power systems.
+          </p>
           <ul>
-            <li>Leak Prevention</li>
-            <li>Drain Setup</li>
-            <li>Water Supply</li>
-            <li>Pipe Fitting</li>
+            <li data-en="Leak Prevention" data-ar="منع التسرب">
+              Leak Prevention
+            </li>
+            <li data-en="Drain Setup" data-ar="تركيب الصرف">Drain Setup</li>
+            <li data-en="Water Supply" data-ar="إمدادات المياه">
+              Water Supply
+            </li>
+            <li data-en="Pipe Fitting" data-ar="تركيب الأنابيب">
+              Pipe Fitting
+            </li>
           </ul>
         </div>
 
         <!-- Card 8 -->
         <div class="service-card">
           <div class="icon">📢</div>
-          <h3>Electromechanical Works</h3>
-          <p>Efficient plumbing solutions for smooth water flow.</p>
+          <h3
+            data-en="Electromechanical Works"
+            data-ar="الأعمال الكهروميكانيكية"
+          >
+            Electromechanical Works
+          </h3>
+          <p
+            data-en="Efficient plumbing solutions for smooth water flow."
+            data-ar="حلول متكاملة للأنظمة الكهروميكانيكية."
+          >
+            Efficient plumbing solutions for smooth water flow.
+          </p>
           <ul>
-            <li>Equipment Installation</li>
-            <li>Routine Maintenance</li>
-            <li>Power Distribution</li>
-            <li>System Integration</li>
+            <li data-en="Equipment Installation" data-ar="تركيب المعدات">
+              Equipment Installation
+            </li>
+            <li data-en="Routine Maintenance" data-ar="صيانة دورية">
+              Routine Maintenance
+            </li>
+            <li data-en="Power Distribution" data-ar="توزيع الطاقة">
+              Power Distribution
+            </li>
+            <li data-en="System Integration" data-ar="تكامل الأنظمة">
+              System Integration
+            </li>
           </ul>
         </div>
       </div>
     </section>
+
     <section class="manpower-section">
-      <h1>Manpower & Recruitment Solutions</h1>
-      <p>Professional workforce solutions tailored to your business needs</p>
-      <p class="manpower-discription">
+      <h1
+        data-en="Manpower & Recruitment Solutions"
+        data-ar="حلول التوظيف والقوى العاملة"
+      >
+        Manpower & Recruitment Solutions
+      </h1>
+
+      <p
+        data-en="Professional workforce solutions tailored to your business needs"
+        data-ar="حلول احترافية للقوى العاملة مصممة حسب احتياجات عملك"
+      >
+        Professional workforce solutions tailored to your business needs
+      </p>
+
+      <p
+        class="manpower-discription"
+        data-en="We provide skilled and reliable manpower across various industries in the UAE. Our recruitment services ensure you get the right talent at the right time"
+        data-ar="نوفر عمالة ماهرة وموثوقة في مختلف القطاعات داخل دولة الإمارات. تضمن خدمات التوظيف لدينا حصولك على الكفاءات المناسبة في الوقت المناسب"
+      >
         We provide skilled and reliable manpower across various industries in
         the UAE. <br />
         Our recruitment services ensure you get the right talent at the right
         time
       </p>
+
       <div class="manpower-cards">
         <div class="manpower-card">
-          <img src="assets/photo-1504307651254-35680f356dfd.jpg" />
+          <img src="assets/Electrical Systems.jpg" />
           <div class="manpower-overlay">
             <div class="manpower-icon">
-              <img src="assets/helmet.png" />
+              <img src="assets/Electrical Systems.png" />
             </div>
-            <h3>Construction Workers</h3>
-            <p>
-              Skilled laborers, carpenters, masons, electricians, plumbers and
-              more.
+            <h3 data-en="Electrical Systems" data-ar="الأنظمة الكهربائية">
+              Electrical Systems
+            </h3>
+            <p
+              data-en="Reliable electrical installations ensuring safe power distribution and smooth operations."
+              data-ar="تركيبات كهربائية موثوقة تضمن توزيع آمن للطاقة وتشغيل سلس."
+            >
+              Reliable electrical installations ensuring safe power distribution
+              and smooth operations.
             </p>
           </div>
         </div>
 
         <div class="manpower-card">
-          <img
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
-          />
+          <img src="assets/Mechanical Services.png" />
           <div class="manpower-overlay">
             <div class="manpower-icon">
-              <img src="assets/profile.png" />
+              <img src="assets/mechanic.png" />
             </div>
-            <h3>Office Staff</h3>
-            <p>
-              Administrators, receptionists, data entry operators, and office
-              assistants.
+            <h3 data-en="Mechanical Services" data-ar="الخدمات الميكانيكية">
+              Mechanical Services
+            </h3>
+            <p
+              data-en="Efficient mechanical solutions designed to support building functionality and performance."
+              data-ar="حلول ميكانيكية فعالة لدعم كفاءة وأداء المباني."
+            >
+              Efficient mechanical solutions designed to support building
+              functionality and performance.
             </p>
           </div>
         </div>
 
         <div class="manpower-card">
-          <img src="assets/photo-1581578731548-c64695cc6952.jpg" />
+          <img src="assets/Maintenance Support (2).png" />
           <div class="manpower-overlay">
             <div class="manpower-icon">
-              <img src="assets/profile setting.png" />
+              <img src="assets/Maintenance Support.png" />
             </div>
-            <h3>Domestic Helpers</h3>
-            <p>Housemaids, nannies, drivers, cooks, and cleaning staff.</p>
+            <h3 data-en="Maintenance Support" data-ar="دعم الصيانة">
+              Maintenance Support
+            </h3>
+            <p
+              data-en="Regular inspections and maintenance to ensure long-lasting and trouble-free systems."
+              data-ar="فحوصات وصيانة دورية لضمان أنظمة طويلة الأمد وخالية من الأعطال."
+            >
+              Regular inspections and maintenance to ensure long-lasting and
+              trouble-free systems.
+            </p>
           </div>
         </div>
 
         <div class="manpower-card">
-          <img src="assets/photo-1581092160562-40aa08e78837.jpg" />
+          <img src="assets/Technical Staff (2).png" />
           <div class="manpower-overlay">
             <div class="manpower-icon">
-              <img src="assets/wrench.png" />
+              <img src="assets/Technical Staff.png" />
             </div>
-            <h3>Technical Staff</h3>
-            <p>
+            <h3 data-en="Technical Staff" data-ar="الطاقم الفني">
+              Technical Staff
+            </h3>
+            <p
+              data-en="Engineers, technicians, mechanics, and specialized professionals."
+              data-ar="مهندسون وفنيون وميكانيكيون ومتخصصون محترفون."
+            >
               Engineers, technicians, mechanics, and specialized professionals.
             </p>
           </div>
         </div>
       </div>
     </section>
+
     <div class="mp-box-wrapper">
-      <div class="mp-box-title">Why Choose Our Manpower Services?</div>
+      <div
+        class="mp-box-title"
+        data-en="Why Choose Our Manpower Services?"
+        data-ar="لماذا تختار خدمات القوى العاملة لدينا؟"
+      >
+        Why Choose Our Manpower Services?
+      </div>
 
       <div class="mp-box-features">
         <div class="mp-box-column">
-          <div class="mp-box-item">
+          <div
+            class="mp-box-item"
+            data-en="Skilled Workforce Availability"
+            data-ar="توفر عمالة ماهرة"
+          >
             <div class="mp-box-check">✓</div>
-            Pre-screened and verified candidates
+            Skilled Workforce Availability
           </div>
-          <div class="mp-box-item">
+          <div
+            class="mp-box-item"
+            data-en="Competitive Pricing"
+            data-ar="أسعار تنافسية"
+          >
             <div class="mp-box-check">✓</div>
             Competitive pricing
           </div>
         </div>
 
         <div class="mp-box-column">
-          <div class="mp-box-item">
+          <div
+            class="mp-box-item"
+            data-en="Quick Staff Deployment"
+            data-ar="نشر سريع للموظفين"
+          >
             <div class="mp-box-check">✓</div>
-            Quick replacement guarantee
+            Quick Staff Deployment
           </div>
-          <div class="mp-box-item">
+          <div
+            class="mp-box-item"
+            data-en="Flexible Staffing Solutions"
+            data-ar="حلول توظيف مرنة"
+          >
             <div class="mp-box-check">✓</div>
-            Complete visa processing
+            Flexible Staffing Solutions
           </div>
         </div>
 
         <div class="mp-box-column">
-          <div class="mp-box-item">
+          <div
+            class="mp-box-item"
+            data-en="Cost Effective Services"
+            data-ar="خدمات فعالة من حيث التكلفة"
+          >
             <div class="mp-box-check">✓</div>
-            Flexible contract terms
+            Cost Effective Services
           </div>
-          <div class="mp-box-item">
+          <div
+            class="mp-box-item"
+            data-en="Reliable Workforce Support"
+            data-ar="دعم عمالة موثوق"
+          >
             <div class="mp-box-check">✓</div>
-            Training and orientation support
+            Reliable Workforce Support
           </div>
         </div>
       </div>
 
       <div class="mp-box-btn">
-        <a href="tel:0566492601">📞 Request Manpower</a>
+        <a href="tel:0566492601" data-en="Request Manpower" data-ar="طلب عمالة">
+          📞 Request Manpower
+        </a>
       </div>
     </div>
+
     <section id="about" class="atg-why-section">
       <div class="atg-container">
         <div class="atg-header">
-          <h2>Why Choose Taqwa Group?</h2>
-          <p>Your success is our commitment</p>
+          <h2
+            data-en="Why Choose Taqwa Group?"
+            data-ar="لماذا تختار مجموعة التقوى؟"
+          >
+            Why Choose Taqwa Group?
+          </h2>
+
+          <p
+            data-en="Your success is our commitment"
+            data-ar="نجاحك هو التزامنا"
+          >
+            Your success is our commitment
+          </p>
         </div>
 
         <div class="atg-grid">
@@ -381,36 +656,68 @@
             <div class="atg-icon">
               <i class="fa-solid fa-user-tie"></i>
             </div>
-            <h3>Experienced Professionals</h3>
-            <p>Years of expertise in UAE business services</p>
+            <h3 data-en="Experienced Professionals" data-ar="محترفون ذوو خبرة">
+              Experienced Professionals
+            </h3>
+            <p
+              data-en="Years of expertise in UAE business services"
+              data-ar="سنوات من الخبرة في خدمات الأعمال داخل دولة الإمارات"
+            >
+              Years of expertise in UAE business services
+            </p>
           </div>
 
           <div class="atg-card">
             <div class="atg-icon">
               <i class="fa-solid fa-clock"></i>
             </div>
-            <h3>Fast Processing</h3>
-            <p>Quick turnaround time for all services</p>
+            <h3 data-en="Fast Processing" data-ar="إنجاز سريع">
+              Fast Processing
+            </h3>
+            <p
+              data-en="Quick turnaround time for all services"
+              data-ar="وقت إنجاز سريع لجميع الخدمات"
+            >
+              Quick turnaround time for all services
+            </p>
           </div>
 
           <div class="atg-card">
             <div class="atg-icon">
               <i class="fa-solid fa-globe"></i>
             </div>
-            <h3>Bilingual Support</h3>
-            <p>Services available in English and Arabic</p>
+            <h3 data-en="Bilingual Support" data-ar="دعم ثنائي اللغة">
+              Bilingual Support
+            </h3>
+            <p
+              data-en="Services available in English and Arabic"
+              data-ar="خدمات متوفرة باللغتين الإنجليزية والعربية"
+            >
+              Services available in English and Arabic
+            </p>
           </div>
 
           <div class="atg-card">
             <div class="atg-icon">
               <i class="fa-solid fa-shield-halved"></i>
             </div>
-            <h3>100% Legal Compliance</h3>
-            <p>All services compliant with UAE laws</p>
+            <h3
+              data-en="100% Legal Compliance"
+              data-ar="التزام قانوني كامل 100%"
+            >
+              100% Legal Compliance
+            </h3>
+            <p
+              data-en="All services compliant with UAE laws"
+              data-ar="جميع الخدمات متوافقة مع قوانين دولة الإمارات"
+            >
+              All services compliant with UAE laws
+            </p>
           </div>
         </div>
       </div>
     </section>
+
     <!-- <section class="atg-partners-section">
       <div class="atg-container">
         <div class="atg-partners-header">
@@ -457,12 +764,25 @@
     </section> -->
     <section id="contact" class="atg-cta-section">
       <div class="atg-cta-container">
-        <h2>Ready to Get Started?</h2>
-        <p>Contact us today for a free consultation</p>
+        <h2 data-en="Ready to Get Started?" data-ar="هل أنت مستعد للبدء؟">
+          Ready to Get Started?
+        </h2>
+
+        <p
+          data-en="Contact us today for a free consultation"
+          data-ar="تواصل معنا اليوم للحصول على استشارة مجانية"
+        >
+          Contact us today for a free consultation
+        </p>
 
         <div class="atg-cta-buttons">
           <!-- Call Button -->
-          <a href="tel:0566492601" class="btn btn-primary">
+          <a
+            href="tel:0566492601"
+            class="btn btn-primary"
+            data-en="Contact Us Now"
+            data-ar="اتصل بنا الآن"
+          >
             <i class="fa-solid fa-phone"></i>
             Contact Us Now
           </a>
@@ -472,6 +792,8 @@
             href="https://wa.me/971566492601"
             target="_blank"
             class="btn btn-outline"
+            data-en="WhatsApp"
+            data-ar="واتساب"
           >
             <i class="fa-brands fa-whatsapp"></i>
             WhatsApp
@@ -489,49 +811,87 @@
               <img src="assets/Taqwa fav icon.png" alt="Taqwa Group Logo" />
             </span>
             <div class="atg-brand-text">
-              <h3>Taqwa Group</h3>
-              <small>Since 2025</small>
+              <h3 data-en="Taqwa Group" data-ar="مجموعة التقوى">Taqwa Group</h3>
+              <small data-en="Since 2025" data-ar="منذ 2025">
+                Since 2025
+              </small>
             </div>
           </div>
 
-          <p class="atg-desc">
+          <p
+            class="atg-desc"
+            data-en="Providing comprehensive PRO services, business setup, visa services, and more across the UAE. Your success is our priority."
+            data-ar="نقدم خدمات العلاقات العامة، تأسيس الأعمال، خدمات التأشيرات والمزيد في جميع أنحاء دولة الإمارات. نجاحك هو أولويتنا."
+          >
             Providing comprehensive PRO services, business setup, visa services,
             <br />
             and more across the UAE. Your success is our priority.
           </p>
 
-          <a href="mailto:Taqwagroup.services@gmail.com" class="atg-email">
-            Taqwagroup.services@gmail.com
+          <a
+            href="mailto:taqwagroupservices01@gmail.com"
+            class="atg-email"
+            data-en="taqwagroupservices01@gmail.com"
+            data-ar="taqwagroupservices01@gmail.com"
+          >
+            taqwagroupservices01@gmail.com
           </a>
         </div>
 
         <!-- Quick Links -->
         <div class="atg-footer-col">
-          <h4>Quick Links</h4>
+          <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            </li>
+            <li>
+              <a href="services.html" data-en="Our Services" data-ar="خدماتنا">
+                Our Services
+              </a>
+            </li>
+            <li>
+              <a href="about.html" data-en="About" data-ar="من نحن">About</a>
+            </li>
+            <li>
+              <a href="contact.html" data-en="Contact" data-ar="اتصل بنا">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div class="atg-footer-col">
-          <h4>Contact Us</h4>
-          <p><i class="fa-solid fa-phone"></i> 0566492601</p>
-          <p><i class="Name"></i> Muhammad Zeeshan</p>
-          <p><i class="fa-solid fa-phone"></i> 0569786608</p>
-          <p><i class="name"></i> Sheikh shahbaz</p>
+          <h4 data-en="Contact Us" data-ar="تواصل معنا">Contact Us</h4>
 
-          <!-- <p><i class="fa-solid fa-location-dot"></i> United Arab Emirates</p> -->
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <span data-en="0566492601" data-ar="0566492601">0566492601</span>
+          </p>
+
+          <p data-en="Muhammad Zeeshan" data-ar="محمد زيشان">
+            Muhammad Zeeshan
+          </p>
+
+          <p>
+            <i class="fa-solid fa-phone"></i>
+            <span data-en="0569786608" data-ar="0569786608">0569786608</span>
+          </p>
+
+          <p data-en="Sheikh Shahbaz" data-ar="الشيخ شهباز">Sheikh shahbaz</p>
         </div>
       </div>
 
-      <div class="atg-footer-bottom">
+      <div
+        class="atg-footer-bottom"
+        data-en="© 2025 Al Taqwa Group of Companies. All rights reserved."
+        data-ar="© 2025 مجموعة التقوى. جميع الحقوق محفوظة."
+      >
         © 2025 Al Taqwa Group of Companies. All rights reserved.
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
