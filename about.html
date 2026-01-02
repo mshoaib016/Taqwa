@@ -893,6 +893,20 @@
 
     <!-- ===== LANGUAGE SCRIPT ===== -->
     <script>
+      const languageSwitcher = document.getElementById("languageSwitcher");
+
+      if (languageSwitcher) {
+        languageSwitcher.addEventListener("change", () => {
+          const lang = languageSwitcher.value;
+
+          document.querySelectorAll("[data-en]").forEach((el) => {
+            el.textContent = el.getAttribute(`data-${lang}`);
+          });
+
+          document.body.dir = lang === "ar" ? "rtl" : "ltr";
+        });
+      }
+
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobileMenu");
       const overlay = document.getElementById("menuOverlay");
