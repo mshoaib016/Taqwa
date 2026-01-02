@@ -800,7 +800,7 @@ html {
 .manpower-icon {
   width: 48px;
   height: 48px;
-  background: #b5a991;
+  /* background: #b5a991; */
   border-radius: 12px;
   display: flex;
   align-items: center;
