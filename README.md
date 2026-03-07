@@ -36,5 +36,12 @@ No frameworks or libraries required.
 
 ---
 
-## Project Structure
+## Author
 
+Muhammad Shoaib  
+
+Shopify Developer  
+Web Developer  
+Digital Marketing Specialist  
+
+---
